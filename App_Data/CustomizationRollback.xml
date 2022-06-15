@@ -1,0 +1,7 @@
+<Rollback>
+  <File path="CstPublished\Pages_RS\RS201000.aspx" method="Delete" />
+  <File path="CstPublished\Pages_RS\RS201000.aspx.cs" method="Delete" />
+  <File path="Bin\PhoneRepairShop_Code.dll" method="Delete" />
+  <File path="Pages\RS\RS201000.aspx" method="Delete" />
+  <File path="Pages\RS\RS201000.aspx.cs" method="Delete" />
+</Rollback>

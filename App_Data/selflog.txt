@@ -4,3 +4,39 @@
    at PX.Logging.Enrichers.AspNetCallbackEnricher.Enrich(LogEvent logEvent, ILogEventPropertyFactory propertyFactory)
    at Serilog.Core.Logger.Dispatch(LogEvent logEvent) caught while enriching Serilog.Events.LogEvent with PX.Logging.Enrichers.AspNetCallbackEnricher.
 
+2022-06-15T03:17:22.0332241Z Exception System.Web.HttpException (0x80004005): Request is not available in this context
+   at System.Web.HttpContext.get_Request()
+   at PX.Logging.Enrichers.AspNetCallbackEnricher.RequestAccessor()
+   at PX.Logging.Enrichers.AspNetCallbackEnricher.Enrich(LogEvent logEvent, ILogEventPropertyFactory propertyFactory)
+   at Serilog.Core.Logger.Dispatch(LogEvent logEvent) caught while enriching Serilog.Events.LogEvent with PX.Logging.Enrichers.AspNetCallbackEnricher.
+
+2022-06-15T03:20:41.5139756Z Exception System.Web.HttpException (0x80004005): Request is not available in this context
+   at System.Web.HttpContext.get_Request()
+   at PX.Logging.Enrichers.AspNetCallbackEnricher.RequestAccessor()
+   at PX.Logging.Enrichers.AspNetCallbackEnricher.Enrich(LogEvent logEvent, ILogEventPropertyFactory propertyFactory)
+   at Serilog.Core.Logger.Dispatch(LogEvent logEvent) caught while enriching Serilog.Events.LogEvent with PX.Logging.Enrichers.AspNetCallbackEnricher.
+
+2022-06-15T03:25:40.2778689Z Exception System.Web.HttpException (0x80004005): Request is not available in this context
+   at System.Web.HttpContext.get_Request()
+   at PX.Logging.Enrichers.AspNetCallbackEnricher.RequestAccessor()
+   at PX.Logging.Enrichers.AspNetCallbackEnricher.Enrich(LogEvent logEvent, ILogEventPropertyFactory propertyFactory)
+   at Serilog.Core.Logger.Dispatch(LogEvent logEvent) caught while enriching Serilog.Events.LogEvent with PX.Logging.Enrichers.AspNetCallbackEnricher.
+
+2022-06-15T03:46:37.6551578Z Exception System.Web.HttpException (0x80004005): Request is not available in this context
+   at System.Web.HttpContext.get_Request()
+   at PX.Logging.Enrichers.AspNetCallbackEnricher.RequestAccessor()
+   at PX.Logging.Enrichers.AspNetCallbackEnricher.Enrich(LogEvent logEvent, ILogEventPropertyFactory propertyFactory)
+   at Serilog.Core.Logger.Dispatch(LogEvent logEvent) caught while enriching Serilog.Events.LogEvent with PX.Logging.Enrichers.AspNetCallbackEnricher.
+
+2022-06-15T03:59:08.4374309Z Exception System.Web.HttpException (0x80004005): Request is not available in this context
+   at System.Web.HttpContext.get_Request()
+   at PX.Logging.Enrichers.AspNetCallbackEnricher.RequestAccessor()
+   at PX.Logging.Enrichers.AspNetCallbackEnricher.Enrich(LogEvent logEvent, ILogEventPropertyFactory propertyFactory)
+   at Serilog.Core.Logger.Dispatch(LogEvent logEvent) caught while enriching Serilog.Events.LogEvent with PX.Logging.Enrichers.AspNetCallbackEnricher.
+
+2022-06-15T04:07:13.9371643Z Exception System.Web.HttpException (0x80004005): Request is not available in this context
+   at System.Web.HttpContext.get_Request()
+   at PX.Logging.Enrichers.AspNetCallbackEnricher.RequestAccessor()
+   at PX.Logging.Enrichers.AspNetCallbackEnricher.Enrich(LogEvent logEvent, ILogEventPropertyFactory propertyFactory)
+   at Serilog.Core.Logger.Dispatch(LogEvent logEvent) caught while enriching Serilog.Events.LogEvent with PX.Logging.Enrichers.AspNetCallbackEnricher.
+
