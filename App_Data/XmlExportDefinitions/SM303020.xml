@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<relations format-version="3" main-table="OidcProvider">
+  <link from="OidcAutoIdentifyingUsersRule (ProviderID)" to="OidcProvider (ProviderID)" />
+  <link from="OidcAutoAddingUsersRule (ProviderID)" to="OidcProvider (ProviderID)" />
+  <link from="OidcRolesMappingRule (ProviderID)" to="OidcProvider (ProviderID)" />
+  
+  <link to="OidcProvider (NoteID)" from="NoteDoc(NoteID)" />
+  <link to="NoteDoc (FileID)" from="UploadFile (FileID)" />
+  <link to="UploadFileRevision (FileID, FileRevisionID)" from="UploadFile (FileID, LastRevisionID)" type="LastRevision" />
+</relations>

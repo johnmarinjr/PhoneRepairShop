@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<relations version="2" main-table="Notification" file-name="(Name)" >
+  <link to="Notification (NotificationID)" from="NotificationReport (NotificationID)" />
+  <link to="NotificationReport (ReportID)" from="NotificationReportParameter (ReportID)" />
+</relations>

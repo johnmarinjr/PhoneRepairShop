@@ -1,0 +1,181 @@
+.toolsBtn.exitTableDefiningButton {
+    color: #CB444A;
+}
+
+.linesHintHidden {
+    display: none;
+}
+
+.linesHintMainContainer {
+    position: absolute;
+    left: 10px;
+    bottom: 19px;
+    z-index: 1;
+    text-align: center;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 6px #3F3F3F;
+    border-radius: 4px;
+    padding: 8px 8px;
+    display: flex;
+    align-items: center;
+}
+
+.linesHintTextContainerWithButton {
+    padding-right: 10px;
+}
+
+.linesHintSelectPrefixLabel {
+    padding-right: 5px;
+    display: inline-block;
+}
+
+.linesHintSelectPrefixLabel.linesHintHidden {
+    display: none;
+}
+
+.linesHintCounter {
+    display: inline-block;
+}
+
+.linesHintCounterLabel {
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.linesHintButton {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 5px 6px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #007ACC;
+    background-color: var(--primary-color, #007ACC);
+}
+
+.linesHintButton.linesHintHidden {
+    display: none;
+}
+
+.linesHintButton:hover {
+    transform: scale(1.05);
+}
+
+.linesHintButton:active {
+    background-color: #D2D4D7;
+}
+
+.recognition-row-checkboxContainer {
+    position: absolute;
+    display: none;
+}
+
+.recognition-row-checkbox {
+    position: absolute;
+    appearance: none;
+    border: 2px solid #00FF04;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+}
+
+.recognition-row-checkbox.active,
+.recognition-row-checkbox.active:focus,
+.recognition-row-checkbox.active:checked {
+     border: 2px solid #027ACC;
+     box-shadow: none;
+}
+
+.recognition-row-checkbox:checked {
+    background-color: #00FF04;
+}
+
+.recognition-row-checkbox:checked::after {
+    position: absolute;
+    content: ' ';
+    width: .1em;
+    height: .25em;
+    border-radius: 0;
+    left: .13em;
+    background: 0 0;
+    border-right: solid white .08em;
+    border-bottom: solid white .08em;
+    font-size: 2.2em;
+    transform: rotate(45deg);
+}
+
+.recognition-rect {
+    fill: rgba(2, 122, 204, 0.2);
+    stroke: #027ACC;
+    stroke-width: 1px;
+}
+
+.recognition-value {
+    opacity: 0;
+}
+
+.recognition-rect.mapped {
+    fill: rgba(0, 255, 4, 0.2);
+    stroke: none;
+    opacity: 1;
+}
+
+.recognition-row,
+.recognition-column {
+    display: none;
+}
+
+.recognition-column-undoContainer {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    color: #FF0000;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    -ms-user-select: none; /* IE */
+    -webkit-user-select: none; /* Safari */
+}
+
+.recognition-row.mapped,
+.mode-column .recognition-column {
+    display: block;
+    stroke: none;
+}
+
+.recognition-column-hover {
+    cursor: pointer;
+    fill: rgba(1, 157, 4, 0.2);
+}
+
+.mode-box .recognition-value:hover,
+.mode-prerow .recognition-value:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.mode-prerow .recognition-row-checkboxContainer,
+.mode-row .recognition-row-checkboxContainer {
+    display: flex;
+}
+
+.mode-row .recognition-value,
+.mode-row .recognition-row-checkboxContainer.hidden-in-row-mode {
+    display: none;
+}
+
+.mode-column .recognition-value,
+.mode-column .recognition-row.mapped,
+.mode-column .recognition-rect.hidden-in-column-mode,
+.mode-column .recognition-column.hidden-in-column-mode {
+    display: none;
+}
+
+.mode-column .recognition-column.mapped {
+    fill: rgba(7, 211, 3, 0.3);
+}
+
+.mode-column .recognition-column.mapped.selected-hover {
+    fill: rgba(7, 150, 3, 0.3);
+}

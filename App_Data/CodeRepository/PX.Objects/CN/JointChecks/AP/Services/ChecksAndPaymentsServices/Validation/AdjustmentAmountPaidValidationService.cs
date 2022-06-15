@@ -1,0 +1,118 @@
+﻿using System;
+using PX.Data;
+using System.Linq;
+using PX.Objects.AP;
+using PX.Objects.CN.Common.Services.DataProviders;
+using PX.Objects.CN.JointChecks.AP.Services.CalculationServices;
+using PX.Objects.CN.JointChecks.AP.Services.DataProviders;
+using PX.Objects.CN.JointChecks.AP.CacheExtensions;
+using PX.Objects.CN.JointChecks.Descriptor;
+
+namespace PX.Objects.CN.JointChecks.AP.Services.ChecksAndPaymentsServices.Validation
+{
+    public class AdjustmentAmountPaidValidationService : ValidationServiceBase
+    {
+        private readonly JointAmountToPayCalculationService jointAmountToPayCalculationService;
+
+        public AdjustmentAmountPaidValidationService(APPaymentEntry graph, IJointCheckErrorHandlingStrategy jointCheckErrorHandlingStrategy)
+            : base(graph, jointCheckErrorHandlingStrategy)
+        {
+            jointAmountToPayCalculationService = new JointAmountToPayCalculationService(graph);
+        }
+
+        public void ValidateAmountsPaid()
+        {
+            foreach (var adjustment in ActualAdjustments)
+            {
+                var invoice = InvoiceDataProvider.GetInvoice(Graph, adjustment.AdjdDocType, adjustment.AdjdRefNbr);
+                var invoiceExt = invoice.GetExtension<APInvoiceJCExt>();
+                if (invoiceExt.IsJointPayees == true)
+                {
+                    ValidateAmountPaid(adjustment, adjustment.CuryAdjgAmt, true);
+                }
+            }
+        }
+
+        public void ValidateAmountPaid(APAdjust adjustment, decimal? amountPaid, bool doNeedShowErrorOnPersist)
+        {
+            InitializeServices(adjustment.AdjdLineNbr != 0);
+            ValidateAmountPaidGreaterThanTotalJointAmountToPay(adjustment, amountPaid, doNeedShowErrorOnPersist);
+            ValidateAmountPaidExceedsBillBalance(adjustment, amountPaid, doNeedShowErrorOnPersist);
+            ValidateAmountPaidExceedsVendorBalanceWithCashDiscountTaken(adjustment, amountPaid, doNeedShowErrorOnPersist);
+        }
+
+        private void ValidateAmountPaidGreaterThanTotalJointAmountToPay(APAdjust adjustment, decimal? amountPaid,
+            bool doNeedShowErrorOnPersist)
+        {
+            var totalJointAmountToPay = jointAmountToPayCalculationService.GetTotalJointAmountToPay(adjustment);
+            if (amountPaid < totalJointAmountToPay)
+            {
+                var errorHandlingParams =
+                    new ShowErrorOnlyWithFieldValueParams(JointCheckMessages.AmountPaidShouldBeEqualOrGreaterErrorTemplate,
+                    adjustment, amountPaid, totalJointAmountToPay);
+                errorHandlingStrategy.HandleError<APAdjust.curyAdjgAmt>(errorHandlingParams);
+
+                if (doNeedShowErrorOnPersist)
+                {
+                    var throwErrorHandlingParams = 
+                        new ThrowErrorOnlyParams(JointCheckMessages.AmountPaidShouldBeEqualOrGreaterErrorTemplate, Graph.Adjustments.Cache.DisplayName);
+                    errorHandlingStrategy.HandleError<APAdjust.curyAdjgAmt>(throwErrorHandlingParams);
+                }
+            }
+        }
+
+        private void ValidateAmountPaidExceedsVendorBalanceWithCashDiscountTaken(APAdjust adjustment, decimal? amountPaid,
+            bool doNeedShowErrorOnPersist)
+        {
+            var vendorPreparedBalance =
+                VendorPreparedBalanceCalculationService.GetVendorPreparedBalance(adjustment);
+            var totalJointAmountToPay = jointAmountToPayCalculationService.GetTotalJointAmountToPay(adjustment);
+            var cashDiscountTakenFromOtherNonReleasedChecks =
+                CashDiscountCalculationService.GetNonReleasedCashDiscountTakenExceptCurrentAdjustment(adjustment);
+            if (amountPaid > vendorPreparedBalance - cashDiscountTakenFromOtherNonReleasedChecks -
+                adjustment.CuryAdjgPPDAmt + totalJointAmountToPay)
+            {
+                var amountPaidLimit = vendorPreparedBalance - cashDiscountTakenFromOtherNonReleasedChecks +
+                    totalJointAmountToPay;
+
+                var errorHandlingParams =
+                    new ShowErrorOnlyWithFieldValueParams(JointCheckMessages.AmountPaidWithCashDiscountTakenExceedsVendorBalance,
+                    adjustment, amountPaid, amountPaidLimit);
+                errorHandlingStrategy.HandleError<APAdjust.curyAdjgAmt>(errorHandlingParams);
+
+                if (doNeedShowErrorOnPersist)
+                {
+                    var throwErrorHandlingParams =
+                        new ThrowErrorOnlyParams(JointCheckMessages.AmountPaidWithCashDiscountTakenExceedsVendorBalance, Graph.Adjustments.Cache.DisplayName);
+                    errorHandlingStrategy.HandleError<APAdjust.curyAdjgAmt>(throwErrorHandlingParams);
+                }
+            }
+        }
+
+        private void ValidateAmountPaidExceedsBillBalance(APAdjust adjustment, decimal? amountPaid,
+            bool doNeedShowErrorOnPersist)
+        {
+            var invoiceAdjustments = AdjustmentDataProvider.GetInvoiceAdjustments(Graph, adjustment.AdjdRefNbr);
+            var unappliedBalance = invoiceAdjustments
+                .Sum(adjust => adjust.CuryAdjgAmt + adjust.CuryAdjgPPDAmt);
+            var billBalance = InvoiceDataProvider.GetInvoice(Graph, adjustment.AdjdDocType, adjustment.AdjdRefNbr)
+                .CuryOrigDocAmt.GetValueOrDefault();
+            var allowableAmountPaid = billBalance - unappliedBalance + amountPaid;
+            if (amountPaid > allowableAmountPaid)
+            {
+                var error = adjustment.AdjdLineNbr != 0
+                       ? JointCheckMessages.AmountPaidExceedsBillLineBalance
+                       : JointCheckMessages.AmountPaidExceedsBillBalance;
+
+                var errorHandlingParams = new ShowErrorOnlyWithFieldValueParams(error, adjustment, amountPaid, allowableAmountPaid);
+                errorHandlingStrategy.HandleError<APAdjust.curyAdjgAmt>(errorHandlingParams);
+
+                if (doNeedShowErrorOnPersist)
+                {
+                    var throwErrorHandlingParams = new ThrowErrorOnlyParams(error, Graph.Adjustments.Cache.DisplayName);
+                    errorHandlingStrategy.HandleError<APAdjust.curyAdjgAmt>(throwErrorHandlingParams);
+                }
+            }
+        }
+    }
+}

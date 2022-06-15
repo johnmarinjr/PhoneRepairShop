@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Acumatica</title>
+		<script type="text/javascript">
+			// Office js deletes window.history.pushState and window.history.replaceState. Cache them and restore them
+			window._historyCache = {
+				replaceState: window.history.replaceState,
+				pushState: window.history.pushState
+			};
+		</script>
+		<script src="//appsforoffice.microsoft.com/lib/1.1/hosted/office.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			// Office js deletes window.history.pushState and window.history.replaceState. Restore them
+			window.history.replaceState = window._historyCache.replaceState;
+			window.history.pushState = window._historyCache.pushState;
+		</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="Acumatica_Teardrop_RGB_MayanBlue_16X16.png">
+		<!-- imported CSS are concatenated and added automatically -->
+	<link href="app.f77f1a43c9879a56ad65.bundle.css" rel="stylesheet"></head>
+	<body aurelia-app="main">
+		<div class="splash">
+			<div class="message">Loading...</div>
+			<i class="ac ac-progress ac-spin"></i>
+		</div>	  
+	<script src="js/vendors.7a5a62ab2fc0b285be93.chunk.js"></script><script src="js/app.bdb15bbe23140f560a14.bundle.js"></script></body>
+</html>

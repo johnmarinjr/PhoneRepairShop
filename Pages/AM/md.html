@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <meta http-equiv="Expires" content="Thu, 01 Jan 1970 00:00:00 GMT" />
+
+	<link rel="stylesheet" href="../../Scripts/scheduler/schedulerpro.material.css">
+	<script type="text/javascript" src="../../Scripts/scheduler/schedulerpro.umd.js"></script>
+	<script type="text/javascript" src="../../Scripts/js-tools.js"></script>
+	<!--script type="text/javascript" src="/Scripts/scheduler/_shared/shared.umd.js"></script-->
+
+	<link rel="stylesheet" href="md.css"/>
+	<script type="text/javascript" src="md.js"></script>
+
+</head>
+
+<body>
+	<div id="mainContainer" class="diagram-container"></div>
+
+	<script>
+
+		window.addEventListener('DOMContentLoaded', (event) => {
+			window.parent.postMessage("ok");
+		});
+
+		window.onmessage = async function (e) {
+			if (e.data.act == "setData") {
+				HELPERS.UI.startDate = undefined;
+				HELPERS.UI.endDate = undefined;
+				HELPERS.UI.timeAxis = {};
+				if (e.data.data === false) {
+					e.data.data = { parameters: {} };
+					SP.Toast.show({
+						html: `An error occurred while requesting data on the server.`,
+						timeout: 4000
+					});
+				}
+				HELPERS.DATA.prepareData(e.data.data, e.data.options);
+				//HELPERS.UI.LocaleHelper.applyLocale();
+				HELPERS.UI.paintBody();
+			}
+			else if (e.data.act == "resetColumns") {
+				SP.Toast.show({
+					html: `The settings have been successfully reset. You can refresh the page to apply the new settings.`,
+					timeout: 11000
+				});
+			}
+		}
+	</script>
+
+</body>
+
+</html>

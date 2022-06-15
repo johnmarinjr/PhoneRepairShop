@@ -1,0 +1,386 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Login.master.cs" Inherits="MasterPages_Login" 
+	EnableViewState="false" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title>Acumatica - Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<style type="text/css">
+		select:focus, input[type="text"]:focus, input[type="password"]:focus
+		{
+			border-radius: 8px;
+			border-width: 2px;
+			border-color: #027acc;
+		}
+		input[type="text"][readonly]:focus {
+			border: solid 1px RGBA(0, 0, 0, 0.12);
+		}
+		select::-ms-expand 
+		{ 
+			display: none;
+		}
+		select
+		{
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			background: url("../icons/arrow.png") 96% / 9px no-repeat #fff;
+		}
+		select.login_lang
+		{
+			background: url("../icons/arrow.png") 94% / 9px no-repeat #fff;
+		}
+		span.error
+		{
+			color: red;
+		}
+
+		#login_customization {
+		width: 100%;
+		z-index: 1000;
+		height: 100%;
+		display: none;
+		background: #0000003d;
+		position: fixed;
+		top: 0;
+		left: 0;
+		justify-content: center;
+		align-items: center;
+		}
+
+		.customization-dlg {
+		width: 460px;
+		height: auto;
+		background: white;
+		border-radius: 10px;
+		padding: 20px;
+		}
+
+		.customization-dlg-top {
+		display: flex;
+		flex-direction: row;
+		height: 30px;
+		align-items: center;
+		}
+		
+		.customization-dlg-top-title {
+		width: 100%;
+		font-weight: normal;
+		}
+
+		.customization-dlg-top-title>span {
+		font-size: 18px;
+		color: black;
+		font-weight: normal;
+		}
+
+		.customization-dlg-top-close {
+		cursor: pointer;
+		text-align: center;
+		font-size: 25px;
+		}
+
+		.customization-dlg-top-close:hover {
+		font-weight: bold;
+		}
+
+		.customization-dlg-body {
+		overflow-y: auto;
+		max-height: 300px;
+		}
+
+		.customization-dlg-body>span>ul {
+		padding-inline-start: 20px;
+		color: black;
+		margin-top: 8px;
+		padding-left: 17px;
+		line-height: 20px;
+		margin-bottom: 0;
+		padding-bottom: 0;
+		}
+
+		.customization-dlg-body>span>ul>li {
+		text-indent: -4px;
+		}
+	</style>
+	<script type='text/javascript'>
+        (function (root, factory) {
+            'use strict';
+            window.adialog = factory(root.jQuery);
+        }(this, function init($, undefined) {
+            var exports = {};
+
+            var templates = {
+                contStyle: " \
+            display: flex; \
+            font: 13px Arial; \
+            position: fixed; \
+            align-items: center; \
+            justify-content: center; \
+            z-index: 1; \
+            left: 0; \
+            top: 0; \
+            width: 100%; \
+            height: 100%; \
+            overflow: auto; \
+            background-color: rgba(0,0,0,0.15);",
+
+                boxStyle: ".dialog-lib-boxStyle { \
+            background-color: transparent; \
+            margin: auto; \
+            border: 0px solid #888; \
+            min-width: 300px; \
+            max-width: 800px; \
+            min-height: 100px; \
+            display: flex; \
+            position: absolute; \
+            flex-direction: column; \
+            justify-content: space-between; \
+            border-radius: 10px; \
+            box-shadow: 1px 1px 4px 2px silver; \
+            animation: traffic .2s forwards; \
+        }",
+
+                titleStyle: ".dialog-lib-titleStyle { \
+            padding: 20px 20px 0px 20px; \
+            font-weight: bold; \
+            font-size: 15px; \
+        }",
+                bodyStyle: ".dialog-lib-bodyStyle { \
+            padding: 20px 20px 10px 20px; \
+        }",
+                buttonsStyle: ".dialog-lib-buttonsStyle { \
+            justify-content: flex-end; \
+            padding: 20px 20px 20px 20px; \
+            display: flex; \
+            gap: 10px; \
+        }",
+                btnStyle: ".dialog-lib-btnStyle { \
+            color: white; \
+            background-color: #027acc; \
+            border: solid 1px #027acc; \
+            border-radius:8px; cursor: pointer; min-width: 80px; \
+            height: 40px; \
+            font-size: 15px; \
+            font-weight: 400; \
+        } \
+        .dialog-lib-btnStyle:hover { \
+            background-color: #3399cc; \
+        } \
+        "
+            }
+
+            exports.dialog = function (p) {
+                if (!p) return;
+
+                var boxEl, titleEl, bodyEl, buttonsEl;
+
+                const contEl = document.createElement("DIV");
+
+                if (p.style && p.style.container) contEl.setAttribute("style", p.style.container);
+                else contEl.setAttribute("style", templates.contStyle);
+
+                const styleEl = document.createElement("STYLE");
+                styleEl.innerText = "@keyframes traffic { \
+            100%{background: #fefefe; } \
+           }"+ templates.boxStyle + templates.bodyStyle + templates.titleStyle + templates.buttonsStyle + templates.btnStyle;
+                contEl.appendChild(styleEl);
+
+                boxEl = document.createElement("DIV");
+
+                if (p.style && p.style.box) boxEl.setAttribute("style", p.style.box);
+                boxEl.classList.add("dialog-lib-boxStyle");
+
+                contEl.appendChild(boxEl);
+
+                if (p.title) {
+                    titleEl = document.createElement("DIV");
+                    if (p.style && p.style.title) titleEl.setAttribute("style", p.style.title);
+                    titleEl.classList.add("dialog-lib-titleStyle");
+                    titleEl.innerHTML = p.title;
+                    boxEl.appendChild(titleEl);
+                }
+
+                if (p.body) {
+                    bodyEl = document.createElement("DIV");
+                    bodyEl.innerHTML = p.body;
+                    if (p.style && p.style.body) bodyEl.setAttribute("style", p.style.body);
+                    bodyEl.classList.add("dialog-lib-bodyStyle");
+                    boxEl.appendChild(bodyEl);
+                }
+
+                if (p.buttons) {
+                    buttonsEl = document.createElement("DIV");
+                    if (p.buttons.style) buttonsEl.setAttribute("style", p.buttons.style);
+                    buttonsEl.classList.add("dialog-lib-buttonsStyle");
+
+                    if (p.buttons.elements) {
+                        p.buttons.elements.forEach(function (el) {
+                            const btn = document.createElement("BUTTON");
+                            btn.classList.add("dialog-lib-btnStyle");
+                            btn.style = el.style;
+                            btn.innerHTML = el.text || "button";
+                            if (el.click) btn.addEventListener("click", el.click);
+                            btn.addEventListener("click", function () {
+                                document.body.removeChild(contEl);
+                            });
+                            buttonsEl.appendChild(btn);
+                        });
+                    }
+                    boxEl.appendChild(buttonsEl);
+                }
+
+                document.body.appendChild(contEl);
+                return ({ boxEl, titleEl, bodyEl, buttonsEl });
+            }
+            return exports;
+        }));
+    </script>
+	<script type='text/javascript'>
+		function initLoginImage()
+		{
+			var an = window.navigator.userAgent.toLowerCase();
+			var isIPhone = an.indexOf("iphone") >= 0, isAndroid = an.indexOf("android") >= 0;
+			var isWinPhone = an.indexOf("windows phone") >= 0 || an.indexOf("wpdesktop") >= 0;
+			var outlook = document.getElementById("__isOutlook");
+			if (((isIPhone || isAndroid || isWinPhone) && window.screen.availWidth < 800) || (outlook != null && outlook.value == "1"))
+			{
+				document.getElementById('login_copyright').style.display = 'block';
+				if (outlook != null && outlook.value == "1")
+				{
+					var links = document.getElementById('login_links');
+					links.style.display = "none";
+
+					var btn_cancel = document.getElementById('btnCancel');
+					if (btn_cancel)
+						btn_cancel.style.display = "none";
+				}
+
+				var bg = document.getElementById('login_bg');
+				var panel = document.getElementById('login_panel');
+				panel.className = "mobile border-box";
+				bg.style.display = "none";
+				return;
+			}
+
+			var url = window.__loginBg;
+			if (url)
+			{
+				var elem = document.getElementById('login_bg_image');
+				var im = new Image(); im.src = url;
+				var initImage = function ()
+				{
+					elem.originalWidth = im.naturalWidth ? im.naturalWidth : im.width;
+					elem.originalHeight = im.naturalHeight ? im.naturalHeight : im.height;
+					resizeLoginImage(); elem.style.display = ""; elem.src = url;
+				}
+				if (im.complete) initImage(); else im.onload = initImage;
+			}
+			else {
+				document.getElementById('login_copyright').style.display = 'block';
+			}
+		}
+
+		function resizeLoginImage()
+		{
+			var elem = document.getElementById('login_bg_image');
+			var container = document.getElementById('login_bg'), panel = document.getElementById('login_panel');
+			if (container.style.display == "")
+			{
+				var nw = elem.originalWidth, nh = elem.originalHeight;
+				var pw = container.offsetWidth - panel.offsetWidth, ph = container.offsetHeight;
+
+				var coeff = Math.max(Math.max(pw / nw, ph / nh), 0.5);
+				elem.style.width = Math.ceil(coeff * nw) + "px";
+				elem.style.height = Math.ceil(coeff * nh) + "px";
+				panel.style.minHeight = elem.style.height;
+				
+				document.getElementById('login_copyright').style.display = 'block';
+			}
+		}
+	</script>
+	<asp:ContentPlaceHolder id="phHead" runat="server" />
+</head>
+<body>
+	<form id="form1" runat="server" autocomplete="off">
+		<div id="login_bg">
+			<img id="login_bg_image" style="display:none" />
+			<input runat="server" id="txtLoginBgIndex" type="hidden" />
+			<input runat="server" id="__isOutlook" type="hidden" />
+		</div>
+		<div id="login_panel" class="border-box">
+			<div id="login_data">
+				<div id="login_logo">
+					<a class="logo" id="panelT_logoCell" tabindex="-1" target="_blank" href="http://www.acumatica.com">
+						<img src="../Icons/login_logo.png" class="login_img" alt="logo" />
+					</a>
+					<asp:ContentPlaceHolder id="phLogo" runat="server" />
+				</div>
+
+				<div id="login_errBox">
+					<asp:Label runat="server" ID="lblMsg" CssClass="login_error" />
+				</div>
+				<div id="login_user">
+					<asp:ContentPlaceHolder id="phUser" runat="server" />
+				</div>
+				<div id="login_ext">
+					<asp:ContentPlaceHolder id="phExt" runat="server" />
+				</div>
+				<asp:ContentPlaceHolder id="phInfo" runat="server" />
+			</div>
+
+			<div id="login_copyright" class="border-box">
+				<div id="login_links">
+					<asp:ContentPlaceHolder id="phLinks" runat="server" />
+				</div>
+
+				<div id="login_customization">
+					<div class="customization-dlg">
+						<div class="customization-dlg-top">
+							<span class="customization-dlg-top-title">
+							<asp:Label runat="server" ID="lblCustomizationDlgTopTitle">Customization details</asp:Label>
+							</span>
+							<span class="ac ac-close customization-dlg-top-close"></span>
+						</div>
+						<div class="customization-dlg-body">
+							<asp:Label runat="server" ID="lblCstProjects" Visible="false" />
+						</div>
+					</div>
+				</div>
+				<asp:Label runat="server" ID="lblCopy">(c) 2007-2013 ProjectX, ltd. All rights reserved.</asp:Label>
+			</div>
+		</div>
+		<script type='text/javascript'>
+			initLoginImage();
+			window.onresize = resizeLoginImage;
+			var customizationUi = {
+				extBtnId: "lblCopy",
+				containerId: "login_customization",
+				customizationDlgClass: "customization-dlg",
+				closeBtnClass: "customization-dlg-top-close"
+			}
+			customizationUi.extBtn = document.getElementById(customizationUi.extBtnId);
+			var versionBuildTxt = customizationUi.extBtn.innerText;
+			if (versionBuildTxt.lastIndexOf("+") == versionBuildTxt.length - 1) {
+				
+				customizationUi.container = document.getElementById(customizationUi.containerId);
+				customizationUi.customizationDlg = customizationUi.container.querySelector("." + customizationUi.customizationDlgClass);
+				customizationUi.closeBtn = customizationUi.container.querySelector("." + customizationUi.closeBtnClass);
+
+				customizationUi.extBtn.addEventListener("click", function () {
+					customizationUi.container.style.display = "flex";
+				});
+				customizationUi.closeBtn.addEventListener("click", function () {
+					customizationUi.container.style.display = 'none';
+				});
+				customizationUi.customizationDlg.addEventListener("dblclick", function () {
+					customizationUi.container.style.display = 'none';
+				});
+			}
+		</script>
+		<asp:ContentPlaceHolder id="phStart" runat="server" />
+	</form>
+</body>
+</html>

@@ -1,0 +1,1790 @@
+{
+	"name": "OU201000",
+	"graphName": "PX.Objects.CR.OUSearchMaint",
+	"primaryView": "Filter",
+	"featureInstalled": [
+		"PX.Objects.CS.FeaturesSet+outlookIntegration"
+	],
+	"actions": [
+		{
+			"name": "backAction",
+			"decorators": []
+		},
+		{
+			"name": "logOutAction",
+			"decorators": []
+		}
+	],
+	"views": [
+		{
+			"name": "Filter",
+			"displayName": "Filter",
+			"isCollection": false,
+			"isFullCollection": false,
+			"featureInstalled": [],
+			"fields": [
+				{
+					"stateType": "default",
+					"args": [
+						0,
+						"email"
+					],
+					"name": "OutgoingEmail",
+					"bound": true,
+					"autoPostback": true,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": "Title",
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "group"
+							},
+							"arguments": [
+								"Title"
+							]
+						},
+						{
+							"name": {
+								"name": "autoPostback"
+							},
+							"arguments": []
+						}
+					]
+				},
+				{
+					"stateType": "simple-selector",
+					"args": [
+						0,
+						"Person"
+					],
+					"name": "ContactID",
+					"bound": true,
+					"autoPostback": true,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": "Title",
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "group"
+							},
+							"arguments": [
+								"Title"
+							]
+						},
+						{
+							"name": {
+								"name": "autoPostback"
+							},
+							"arguments": []
+						}
+					]
+				},
+				{
+					"stateType": "default",
+					"args": [
+						5
+					],
+					"name": "EMail",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": "Title",
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "group"
+							},
+							"arguments": [
+								"Title"
+							]
+						}
+					]
+				},
+				{
+					"stateType": "default",
+					"args": [
+						12
+					],
+					"name": "ErrorMessage",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": "Title",
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "group"
+							},
+							"arguments": [
+								"Title"
+							]
+						}
+					]
+				},
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "DisplayName",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": "Info",
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "group"
+							},
+							"arguments": [
+								"Info"
+							]
+						}
+					]
+				},
+				{
+					"stateType": "default",
+					"args": null,
+					"name": "NewContactFirstName",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": "Info",
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "group"
+							},
+							"arguments": [
+								"Info"
+							]
+						}
+					]
+				},
+				{
+					"stateType": "default",
+					"args": null,
+					"name": "NewContactLastName",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": "Info",
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "group"
+							},
+							"arguments": [
+								"Info"
+							]
+						}
+					]
+				},
+				{
+					"stateType": "default",
+					"args": null,
+					"name": "NewContactEmail",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": "Info",
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "group"
+							},
+							"arguments": [
+								"Info"
+							]
+						}
+					]
+				},
+				{
+					"stateType": "default",
+					"args": null,
+					"name": "Salutation",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": "Info",
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "group"
+							},
+							"arguments": [
+								"Info"
+							]
+						}
+					]
+				},
+				{
+					"stateType": "simple-selector",
+					"args": null,
+					"name": "BAccountID",
+					"bound": true,
+					"autoPostback": true,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": "Info",
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "group"
+							},
+							"arguments": [
+								"Info"
+							]
+						},
+						{
+							"name": {
+								"name": "autoPostback"
+							},
+							"arguments": []
+						}
+					]
+				},
+				{
+					"stateType": null,
+					"args": null,
+					"name": "FullName",
+					"bound": false,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": true,
+					"text": null,
+					"group": "Info",
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "group"
+							},
+							"arguments": [
+								"Info"
+							]
+						}
+					]
+				},
+				{
+					"stateType": "default",
+					"args": [
+						0,
+						"Lead source"
+					],
+					"name": "LeadSource",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": "Info",
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "group"
+							},
+							"arguments": [
+								"Info"
+							]
+						}
+					]
+				},
+				{
+					"stateType": "default",
+					"args": [
+						0,
+						"Contact source"
+					],
+					"name": "ContactSource",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": "Info",
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "group"
+							},
+							"arguments": [
+								"Info"
+							]
+						}
+					]
+				},
+				{
+					"stateType": "simple-selector",
+					"args": null,
+					"name": "CountryID",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": "Info",
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "group"
+							},
+							"arguments": [
+								"Info"
+							]
+						}
+					]
+				},
+				{
+					"stateType": "default",
+					"args": null,
+					"name": "EntityID",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": "Info",
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "group"
+							},
+							"arguments": [
+								"Info"
+							]
+						}
+					]
+				},
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "EntityName",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "AttachmentNames",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "AttachmentsCount",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "IsRecognitionInProgress",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "NumOfRecognizedDocuments",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "Operation",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": [
+						8
+					],
+					"name": "DuplicateFilesMsg",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				}
+			],
+			"extensions": [],
+			"decorators": []
+		},
+		{
+			"name": "NewCase",
+			"displayName": "NewCase",
+			"isCollection": false,
+			"isFullCollection": false,
+			"featureInstalled": [],
+			"fields": [
+				{
+					"stateType": "simple-selector",
+					"args": null,
+					"name": "CaseClassID",
+					"bound": true,
+					"autoPostback": true,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "autoPostback"
+							},
+							"arguments": []
+						}
+					]
+				},
+				{
+					"stateType": "simple-selector",
+					"args": null,
+					"name": "ContractID",
+					"bound": true,
+					"autoPostback": true,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "autoPostback"
+							},
+							"arguments": []
+						}
+					]
+				},
+				{
+					"stateType": "default",
+					"args": null,
+					"name": "Severity",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": null,
+					"name": "Subject",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				}
+			],
+			"extensions": [],
+			"decorators": []
+		},
+		{
+			"name": "NewOpportunity",
+			"displayName": "NewOpportunity",
+			"isCollection": false,
+			"isFullCollection": false,
+			"featureInstalled": [],
+			"fields": [
+				{
+					"stateType": "simple-selector",
+					"args": null,
+					"name": "ClassID",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": null,
+					"name": "Subject",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": null,
+					"name": "StageID",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": null,
+					"name": "CloseDate",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "pair",
+					"args": [
+						"CurrencyID"
+					],
+					"name": "ManualAmount",
+					"bound": true,
+					"autoPostback": true,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "autoPostback"
+							},
+							"arguments": []
+						}
+					]
+				},
+				{
+					"stateType": "simple-selector",
+					"args": [
+						2
+					],
+					"name": "CurrencyID",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "simple-selector",
+					"args": null,
+					"name": "BranchID",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				}
+			],
+			"extensions": [],
+			"decorators": []
+		},
+		{
+			"name": "NewActivity",
+			"displayName": "NewActivity",
+			"isCollection": false,
+			"isFullCollection": false,
+			"featureInstalled": [],
+			"fields": [
+				{
+					"stateType": "default",
+					"args": null,
+					"name": "Subject",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "simple-selector",
+					"args": null,
+					"name": "CaseCD",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "simple-selector",
+					"args": null,
+					"name": "OpportunityID",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": null,
+					"name": "IsLinkContact",
+					"bound": true,
+					"autoPostback": true,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "autoPostback"
+							},
+							"arguments": []
+						}
+					]
+				},
+				{
+					"stateType": "default",
+					"args": null,
+					"name": "IsLinkCase",
+					"bound": true,
+					"autoPostback": true,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "autoPostback"
+							},
+							"arguments": []
+						}
+					]
+				},
+				{
+					"stateType": "default",
+					"args": null,
+					"name": "IsLinkOpportunity",
+					"bound": true,
+					"autoPostback": true,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "autoPostback"
+							},
+							"arguments": []
+						}
+					]
+				}
+			],
+			"extensions": [
+				{
+					"name": null,
+					"displayName": null,
+					"isCollection": false,
+					"isFullCollection": false,
+					"featureInstalled": [
+						"PX.Objects.CS.FeaturesSet+ConstructionProjectManagement"
+					],
+					"fields": [
+						{
+							"stateType": "simple-selector",
+							"args": null,
+							"name": "ProjectId",
+							"bound": true,
+							"autoPostback": false,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": "caseCD",
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "placeBeforeProperty"
+									},
+									"arguments": [
+										"caseCD"
+									]
+								}
+							]
+						},
+						{
+							"stateType": "simple-selector",
+							"args": null,
+							"name": "RequestForInformationId",
+							"bound": true,
+							"autoPostback": false,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": "caseCD",
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "placeBeforeProperty"
+									},
+									"arguments": [
+										"caseCD"
+									]
+								}
+							]
+						},
+						{
+							"stateType": "simple-selector",
+							"args": null,
+							"name": "ProjectIssueId",
+							"bound": true,
+							"autoPostback": false,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": "caseCD",
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "placeBeforeProperty"
+									},
+									"arguments": [
+										"caseCD"
+									]
+								}
+							]
+						},
+						{
+							"stateType": "default",
+							"args": null,
+							"name": "IsLinkProject",
+							"bound": true,
+							"autoPostback": true,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "autoPostback"
+									},
+									"arguments": []
+								}
+							]
+						},
+						{
+							"stateType": "default",
+							"args": null,
+							"name": "IsLinkRequestForInformation",
+							"bound": true,
+							"autoPostback": true,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "autoPostback"
+									},
+									"arguments": []
+								}
+							]
+						},
+						{
+							"stateType": "default",
+							"args": null,
+							"name": "IsLinkProjectIssue",
+							"bound": true,
+							"autoPostback": true,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "autoPostback"
+									},
+									"arguments": []
+								}
+							]
+						}
+					],
+					"extensions": [],
+					"decorators": [
+						{
+							"name": {
+								"name": "featureInstalled"
+							},
+							"arguments": [
+								"PX.Objects.CS.FeaturesSet+ConstructionProjectManagement"
+							]
+						},
+						{
+							"name": {
+								"name": "extendsViewModel"
+							},
+							"arguments": []
+						}
+					]
+				}
+			],
+			"decorators": []
+		},
+		{
+			"name": "SourceMessage",
+			"displayName": "SourceMessage",
+			"isCollection": false,
+			"isFullCollection": false,
+			"featureInstalled": [],
+			"fields": [
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "MessageId",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "To",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "CC",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "Subject",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "ItemId",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "IsIncome",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "EwsUrl",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "Token",
+					"bound": true,
+					"autoPostback": true,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "autoPostback"
+							},
+							"arguments": []
+						}
+					]
+				}
+			],
+			"extensions": [],
+			"decorators": []
+		},
+		{
+			"name": "APBillAttachments",
+			"displayName": "APBillAttachments",
+			"isCollection": true,
+			"isFullCollection": true,
+			"featureInstalled": [],
+			"fields": [
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "ItemId",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "Id",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": [
+						4
+					],
+					"name": "Name",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				},
+				{
+					"stateType": "default",
+					"args": null,
+					"name": "Selected",
+					"bound": true,
+					"autoPostback": true,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": "",
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": [
+						{
+							"name": {
+								"name": "autoPostback"
+							},
+							"arguments": []
+						},
+						{
+							"name": {
+								"name": "text"
+							},
+							"arguments": [
+								""
+							]
+						}
+					]
+				},
+				{
+					"stateType": "default",
+					"args": [
+						2
+					],
+					"name": "RecognitionStatus",
+					"bound": true,
+					"autoPostback": false,
+					"suppressLabel": false,
+					"readonly": false,
+					"calculated": false,
+					"text": null,
+					"group": null,
+					"placeBeforeProperty": null,
+					"placeAfterProperty": null,
+					"decorators": []
+				}
+			],
+			"extensions": [],
+			"decorators": []
+		}
+	],
+	"extensions": [
+		{
+			"name": "ou201000_extension",
+			"graphName": null,
+			"primaryView": null,
+			"featureInstalled": [
+				"PX.Objects.CS.FeaturesSet+ConstructionProjectManagement"
+			],
+			"actions": [
+				{
+					"name": "createRequestForInformation",
+					"decorators": []
+				},
+				{
+					"name": "createProjectIssue",
+					"decorators": []
+				},
+				{
+					"name": "redirectToCreateRequestForInformation",
+					"decorators": []
+				},
+				{
+					"name": "redirectToCreateProjectIssue",
+					"decorators": []
+				}
+			],
+			"views": [
+				{
+					"name": "RequestForInformationOutlook",
+					"displayName": "RequestForInformationOutlook",
+					"isCollection": false,
+					"isFullCollection": false,
+					"featureInstalled": [],
+					"fields": [
+						{
+							"stateType": "default",
+							"args": null,
+							"name": "Summary",
+							"bound": true,
+							"autoPostback": false,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": []
+						},
+						{
+							"stateType": "simple-selector",
+							"args": null,
+							"name": "ProjectId",
+							"bound": true,
+							"autoPostback": true,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "autoPostback"
+									},
+									"arguments": []
+								}
+							]
+						},
+						{
+							"stateType": "simple-selector",
+							"args": null,
+							"name": "contactId",
+							"bound": true,
+							"autoPostback": false,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": []
+						},
+						{
+							"stateType": "default",
+							"args": null,
+							"name": "Incoming",
+							"bound": true,
+							"autoPostback": true,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "autoPostback"
+									},
+									"arguments": []
+								}
+							]
+						},
+						{
+							"stateType": "default",
+							"args": null,
+							"name": "Status",
+							"bound": true,
+							"autoPostback": true,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "autoPostback"
+									},
+									"arguments": []
+								}
+							]
+						},
+						{
+							"stateType": "simple-selector",
+							"args": null,
+							"name": "ClassId",
+							"bound": true,
+							"autoPostback": true,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "autoPostback"
+									},
+									"arguments": []
+								}
+							]
+						},
+						{
+							"stateType": "simple-selector",
+							"args": null,
+							"name": "PriorityId",
+							"bound": true,
+							"autoPostback": true,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "autoPostback"
+									},
+									"arguments": []
+								}
+							]
+						},
+						{
+							"stateType": "simple-selector",
+							"args": null,
+							"name": "OwnerId",
+							"bound": true,
+							"autoPostback": false,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": []
+						},
+						{
+							"stateType": "default",
+							"args": null,
+							"name": "DueResponseDate",
+							"bound": true,
+							"autoPostback": true,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "autoPostback"
+									},
+									"arguments": []
+								}
+							]
+						},
+						{
+							"stateType": "default",
+							"args": null,
+							"name": "IsScheduleImpact",
+							"bound": true,
+							"autoPostback": true,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "autoPostback"
+									},
+									"arguments": []
+								}
+							]
+						},
+						{
+							"stateType": "default",
+							"args": null,
+							"name": "ScheduleImpact",
+							"bound": true,
+							"autoPostback": false,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": []
+						},
+						{
+							"stateType": "default",
+							"args": null,
+							"name": "IsCostImpact",
+							"bound": true,
+							"autoPostback": true,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "autoPostback"
+									},
+									"arguments": []
+								}
+							]
+						},
+						{
+							"stateType": "default",
+							"args": null,
+							"name": "CostImpact",
+							"bound": true,
+							"autoPostback": false,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": []
+						},
+						{
+							"stateType": "default",
+							"args": null,
+							"name": "DesignChange",
+							"bound": true,
+							"autoPostback": false,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": []
+						}
+					],
+					"extensions": [],
+					"decorators": []
+				},
+				{
+					"name": "ProjectIssueOutlook",
+					"displayName": "ProjectIssueOutlook",
+					"isCollection": false,
+					"isFullCollection": false,
+					"featureInstalled": [],
+					"fields": [
+						{
+							"stateType": "default",
+							"args": null,
+							"name": "Summary",
+							"bound": true,
+							"autoPostback": false,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": []
+						},
+						{
+							"stateType": "simple-selector",
+							"args": null,
+							"name": "ProjectId",
+							"bound": true,
+							"autoPostback": true,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "autoPostback"
+									},
+									"arguments": []
+								}
+							]
+						},
+						{
+							"stateType": "simple-selector",
+							"args": null,
+							"name": "ClassId",
+							"bound": true,
+							"autoPostback": true,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "autoPostback"
+									},
+									"arguments": []
+								}
+							]
+						},
+						{
+							"stateType": "simple-selector",
+							"args": null,
+							"name": "PriorityId",
+							"bound": true,
+							"autoPostback": true,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "autoPostback"
+									},
+									"arguments": []
+								}
+							]
+						},
+						{
+							"stateType": "simple-selector",
+							"args": null,
+							"name": "OwnerID",
+							"bound": true,
+							"autoPostback": false,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": []
+						},
+						{
+							"stateType": "default",
+							"args": null,
+							"name": "DueDate",
+							"bound": true,
+							"autoPostback": true,
+							"suppressLabel": false,
+							"readonly": false,
+							"calculated": false,
+							"text": null,
+							"group": null,
+							"placeBeforeProperty": null,
+							"placeAfterProperty": null,
+							"decorators": [
+								{
+									"name": {
+										"name": "autoPostback"
+									},
+									"arguments": []
+								}
+							]
+						}
+					],
+					"extensions": [],
+					"decorators": []
+				}
+			],
+			"extensions": [],
+			"decorators": [
+				{
+					"name": {
+						"name": "featureInstalled"
+					},
+					"arguments": [
+						"PX.Objects.CS.FeaturesSet+ConstructionProjectManagement"
+					]
+				},
+				{
+					"name": {
+						"name": "extendsScreen"
+					},
+					"arguments": []
+				}
+			]
+		}
+	],
+	"decorators": [
+		{
+			"name": {
+				"name": "graphInfo"
+			},
+			"arguments": [
+				{
+					"graphType": "PX.Objects.CR.OUSearchMaint",
+					"primaryView": "Filter"
+				}
+			]
+		},
+		{
+			"name": {
+				"name": "autoinject"
+			},
+			"arguments": []
+		},
+		{
+			"name": {
+				"name": "featureInstalled"
+			},
+			"arguments": [
+				"PX.Objects.CS.FeaturesSet+outlookIntegration"
+			]
+		}
+	]
+}
