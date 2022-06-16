@@ -1,4 +1,6 @@
 <Rollback>
+  <File path="CstPublished\pages_in\in202500.aspx" method="Delete" />
+  <File path="CstPublished\pages_in\in202500.aspx.cs" method="Delete" />
   <File path="CstPublished\Pages_RS\RS201000.aspx" method="Delete" />
   <File path="CstPublished\Pages_RS\RS201000.aspx.cs" method="Delete" />
   <File path="CstPublished\pages_rs\rs202000.aspx" method="Delete" />
