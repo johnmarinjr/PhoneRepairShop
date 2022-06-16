@@ -7,10 +7,10 @@ namespace PhoneRepairShop
     public class RSSVRepairServiceMaint : PXGraph<RSSVRepairServiceMaint>
     {
 
-        protected void RSSVRepairService_WalkInService_FieldUpdated(PXCache cache, PXFieldUpdatedEventArgs e)
+        protected void _(Events.FieldUpdated<RSSVRepairService, RSSVRepairService.walkInService> e)
         {
 
-            var row = (RSSVRepairService)e.Row;
+            var row = e.Row;
 
             if (row.WalkInService == true)
             {
