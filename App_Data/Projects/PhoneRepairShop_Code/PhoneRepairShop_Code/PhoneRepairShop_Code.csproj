@@ -1,4 +1,4 @@
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -64,7 +64,10 @@
     <Compile Include="DAC\RSSVRepairService.cs" />
     <Compile Include="DAC\InventoryItemExtensions.cs" />
     <Compile Include="InventoryItemMaint.cs" />
-<Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RSSVRepairPriceMaint.cs" />
+    <Compile Include="DAC\RSSVRepairPrice.cs" />
+    <Compile Include="DAC\RSSVRepairItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Bcl.AsyncInterfaces">
