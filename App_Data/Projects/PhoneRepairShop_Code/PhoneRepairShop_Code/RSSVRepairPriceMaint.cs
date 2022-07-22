@@ -1,6 +1,8 @@
 using System;
 using PX.Data;
 using PX.Data.BQL.Fluent;
+using PX.Objects.IN;
+
 namespace PhoneRepairShop
 {
     public class RSSVRepairPriceMaint : PXGraph<RSSVRepairPriceMaint, RSSVRepairPrice>

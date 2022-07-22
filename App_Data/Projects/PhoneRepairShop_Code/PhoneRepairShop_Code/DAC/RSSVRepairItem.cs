@@ -2,6 +2,7 @@ using System;
 using PX.Data;
 using PX.Data.BQL.Fluent;
 using PX.Objects.IN;
+using PX.Data.BQL;
 
 namespace PhoneRepairShop
 {
@@ -10,6 +11,14 @@ namespace PhoneRepairShop
   public class RSSVRepairItem : IBqlTable
   {
         #region InventoryID
+        [PXRestrictor(typeof(
+            Where<InventoryItemExt.usrRepairItem.IsEqual<True>.
+                And<Brackets<
+                    RSSVRepairItem.repairItemType.FromCurrent.IsNull.
+                    Or<InventoryItemExt.usrRepairItemType.
+                        IsEqual<RSSVRepairItem.repairItemType.FromCurrent>>>>>),
+            Messages.StockItemIncorrectRepairItemType,
+            typeof(RSSVRepairItem.repairItemType))]
         [Inventory]
         [PXDefault]
         public virtual int? InventoryID { get; set; }

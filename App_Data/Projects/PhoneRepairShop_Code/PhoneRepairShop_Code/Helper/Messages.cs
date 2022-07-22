@@ -1,5 +1,8 @@
-﻿namespace PhoneRepairShop
+﻿using PX.Common;
+
+namespace PhoneRepairShop
 {
+    [PXLocalizable()]
     public static class Messages
     {
         //Complexity of repair
@@ -13,5 +16,8 @@
         public const string ScreenCover = "Screen Cover";
         public const string BackCover = "Back Cover";
         public const string Motherboard = "Motherboard";
+
+        //Messages
+        public const string StockItemIncorrectRepairItemType = "This stock item has a repair item type that differs from {0}.";
     }
 }

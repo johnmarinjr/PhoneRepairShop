@@ -39,7 +39,10 @@
 									<px:PXGridColumn CommitChanges="True" DataField="BasePrice" Width="100" ></px:PXGridColumn>
 									<px:PXGridColumn CommitChanges="True" Type="CheckBox" DataField="IsDefault" Width="80" ></px:PXGridColumn></Columns>
 								<RowTemplate>
-									<px:PXSegmentMask runat="server" ID="CstPXSegmentMask6" DataField="InventoryID" AutoRefresh="True" ></px:PXSegmentMask></RowTemplate></px:PXGridLevel></Levels>
+									<px:PXSegmentMask runat="server" ID="CstPXSegmentMask6" DataField="InventoryID" AutoRefresh="True" ></px:PXSegmentMask>
+								</RowTemplate>
+							</px:PXGridLevel>
+						</Levels>
 						<AutoSize Enabled="True" ></AutoSize>
 						<Mode InitNewRow="True" ></Mode></px:PXGrid></Template>
 			</px:PXTabItem>
