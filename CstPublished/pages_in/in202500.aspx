@@ -62,7 +62,7 @@
 </asp:Content>
 <asp:Content ID="cont3" ContentPlaceHolderID="phG" runat="Server">
     <px:PXTab ID="tab" runat="server" Width="100%" Height="606px" DataSourceID="ds" DataMember="ItemSettings" FilesIndicator="False" NoteIndicator="False">
-        <AutoSize Enabled="True" Container="Window" MinHeight="150" />
+        <AutoSize Enabled="True" Container="Window" MinHeight="150" ></AutoSize>
         <Items>
             <px:PXTabItem Text="General">
                 <Template>
@@ -144,232 +144,232 @@
             <px:PXTabItem Text="Subitems" Key="Subitems" RepaintOnDemand="false">
                 <Template>
                     <px:PXGrid ID="gridSegmentValues" runat="server" DataSourceID="ds" Height="100%" Width="100%" SkinID="DetailsInTab">
-                        <Mode InitNewRow="true" />
+                        <Mode InitNewRow="true" ></Mode>
                         <Levels>
                             <px:PXGridLevel DataMember="SegmentValues">
                                 <Columns>
-                                    <px:PXGridColumn DataField="SegmentID" Width="90px" CommitChanges="true" />
-                                    <px:PXGridColumn DataField="Value" DisplayFormat="&gt;aaaaaa" Width="90px" CommitChanges="true" />
+                                    <px:PXGridColumn DataField="SegmentID" Width="90px" CommitChanges="true" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="Value" DisplayFormat="&gt;aaaaaa" Width="90px" CommitChanges="true" ></px:PXGridColumn>
                                 </Columns>
                             </px:PXGridLevel>
                         </Levels>
-                        <AutoSize Enabled="True" />
+                        <AutoSize Enabled="True" ></AutoSize>
                     </px:PXGrid>
                 </Template>
             </px:PXTabItem>
             <px:PXTabItem Text="Price/Cost">
                 <Template>
-                    <px:PXLayoutRule runat="server" StartColumn="True" StartGroup="True" ControlSize="XM" GroupCaption="Price Management" />
-                    <px:PXSelector ID="edPriceClassID" runat="server" DataField="PriceClassID" AllowEdit="True" />
-                    <px:PXSelector CommitChanges="True" ID="edPriceWorkgroupID" runat="server" DataField="PriceWorkgroupID" ShowRootNode="False" />
-                    <px:PXSelector ID="edPriceManagerID" runat="server" DataField="PriceManagerID" AutoRefresh="True" CommitChanges="True"/>
-                    <px:PXCheckBox SuppressLabel="True" ID="chkCommisionable" runat="server" DataField="Commisionable" />
-                    <px:PXNumberEdit ID="edMinGrossProfitPct" runat="server" DataField="MinGrossProfitPct" />
-                    <px:PXNumberEdit ID="edMarkupPct" runat="server" DataField="MarkupPct" />
+                    <px:PXLayoutRule runat="server" StartColumn="True" StartGroup="True" ControlSize="XM" GroupCaption="Price Management" ></px:PXLayoutRule>
+                    <px:PXSelector ID="edPriceClassID" runat="server" DataField="PriceClassID" AllowEdit="True" ></px:PXSelector>
+                    <px:PXSelector CommitChanges="True" ID="edPriceWorkgroupID" runat="server" DataField="PriceWorkgroupID" ShowRootNode="False" ></px:PXSelector>
+                    <px:PXSelector ID="edPriceManagerID" runat="server" DataField="PriceManagerID" AutoRefresh="True" CommitChanges="True"></px:PXSelector>
+                    <px:PXCheckBox SuppressLabel="True" ID="chkCommisionable" runat="server" DataField="Commisionable" ></px:PXCheckBox>
+                    <px:PXNumberEdit ID="edMinGrossProfitPct" runat="server" DataField="MinGrossProfitPct" ></px:PXNumberEdit>
+                    <px:PXNumberEdit ID="edMarkupPct" runat="server" DataField="MarkupPct" ></px:PXNumberEdit>
 
                     <px:PXFormView ID="curySettingsForm" runat="server" SkinID="Inside" RenderStyle="simple" DataSourceID="ds" DataMember="CurySettings_InventoryItem" CaptionVisible="false">
                         <Template>
-                            <px:PXLayoutRule ID="PXLayoutRule3" runat="server" StartColumn="true" ControlSize="XM" />
-                            <px:PXLayoutRule ID="edMerge01" runat="server" Merge="true" />
+                            <px:PXLayoutRule ID="PXLayoutRule3" runat="server" StartColumn="true" ControlSize="XM" ></px:PXLayoutRule>
+                            <px:PXLayoutRule ID="edMerge01" runat="server" Merge="true" ></px:PXLayoutRule>
                             <px:PXTextEdit ID="edRecPriceLabel" runat="server" 
                                            Style="background-color: transparent; border-width:0px; padding-left:0px; color:#5c5c5c"
                                            DataField="RecPrice_Label" 
                                            SuppressLabel="true" 
                                            Width="104px"  
                                            Enabled="false"
-                                           IsClientControl="false" />
-                            <px:PXNumberEdit ID="edRecPrice" runat="server" DataField="RecPrice" SuppressLabel="true" />
-                            <px:PXLayoutRule ID="edMerge02" runat="server" Merge="false" />
-                            <px:PXLayoutRule ID="edMerge11" runat="server" Merge="true" />
+                                           IsClientControl="false" ></px:PXTextEdit>
+                            <px:PXNumberEdit ID="edRecPrice" runat="server" DataField="RecPrice" SuppressLabel="true" ></px:PXNumberEdit>
+                            <px:PXLayoutRule ID="edMerge02" runat="server" Merge="false" ></px:PXLayoutRule>
+                            <px:PXLayoutRule ID="edMerge11" runat="server" Merge="true" ></px:PXLayoutRule>
                             <px:PXTextEdit ID="edBasePriceLabel" runat="server" 
                                            Style="background-color: transparent; border-width:0px; padding-left:0px; color:#5c5c5c"
                                            DataField="BasePrice_Label" 
                                            SuppressLabel="true" 
                                            Width="104px"  
                                            Enabled="false"
-                                           IsClientControl="false" />
-                            <px:PXNumberEdit ID="edBasePrice" runat="server" DataField="BasePrice" Enabled="true" SuppressLabel="true" />
-                            <px:PXLayoutRule ID="edMerge12" runat="server" Merge="false" />
+                                           IsClientControl="false" ></px:PXTextEdit>
+                            <px:PXNumberEdit ID="edBasePrice" runat="server" DataField="BasePrice" Enabled="true" SuppressLabel="true" ></px:PXNumberEdit>
+                            <px:PXLayoutRule ID="edMerge12" runat="server" Merge="false" ></px:PXLayoutRule>
                         </Template>
                     </px:PXFormView>
 
 
-                    <px:PXLayoutRule runat="server" StartColumn="True" ControlSize="XM" StartGroup="True" GroupCaption="Standard Cost" />
+                    <px:PXLayoutRule runat="server" StartColumn="True" ControlSize="XM" StartGroup="True" GroupCaption="Standard Cost" ></px:PXLayoutRule>
                     <px:PXFormView ID="curySettingsForm2" runat="server" SkinID="Inside" RenderStyle="simple" DataSourceID="ds" DataMember="CurySettings_InventoryItem" CaptionVisible="false">
                         <Template>
-                            <px:PXLayoutRule ID="edMerge21" runat="server" Merge="true" />
+                            <px:PXLayoutRule ID="edMerge21" runat="server" Merge="true" ></px:PXLayoutRule>
                             <px:PXTextEdit ID="edPendingStdCostLabel" runat="server" 
                                            Style="background-color: transparent; border-width:0px; padding-left:0px; color:#5c5c5c"
                                            DataField="PendingStdCost_Label" 
                                            SuppressLabel="true" 
                                            Width="104px"  
                                            Enabled="false"
-                                           IsClientControl="false" />
-                            <px:PXNumberEdit ID="edPendingStdCost" runat="server" DataField="PendingStdCost" SuppressLabel="true" />
-                            <px:PXLayoutRule ID="edMerge22" runat="server" Merge="false" />
+                                           IsClientControl="false" ></px:PXTextEdit>
+                            <px:PXNumberEdit ID="edPendingStdCost" runat="server" DataField="PendingStdCost" SuppressLabel="true" ></px:PXNumberEdit>
+                            <px:PXLayoutRule ID="edMerge22" runat="server" Merge="false" ></px:PXLayoutRule>
                             
-                            <px:PXDateTimeEdit ID="edPendingStdCostDate" runat="server" DataField="PendingStdCostDate" />
-                            <px:PXLayoutRule ID="edMerge31" runat="server" Merge="true" />
+                            <px:PXDateTimeEdit ID="edPendingStdCostDate" runat="server" DataField="PendingStdCostDate" ></px:PXDateTimeEdit>
+                            <px:PXLayoutRule ID="edMerge31" runat="server" Merge="true" ></px:PXLayoutRule>
                             <px:PXTextEdit ID="edStdCostLabel" runat="server" 
                                            Style="background-color: transparent; border-width:0px; padding-left:0px; color:#5c5c5c"
                                            DataField="StdCost_Label" 
                                            SuppressLabel="true" 
                                            Width="104px"  
                                            Enabled="false"
-                                           IsClientControl="false" />
-                            <px:PXNumberEdit ID="edStdCost" runat="server" DataField="StdCost" SuppressLabel="true" />
-                            <px:PXLayoutRule ID="edMerge32" runat="server" Merge="false" />
+                                           IsClientControl="false" ></px:PXTextEdit>
+                            <px:PXNumberEdit ID="edStdCost" runat="server" DataField="StdCost" SuppressLabel="true" ></px:PXNumberEdit>
+                            <px:PXLayoutRule ID="edMerge32" runat="server" Merge="false" ></px:PXLayoutRule>
                             
-                            <px:PXDateTimeEdit ID="edStdCostDate" runat="server" DataField="StdCostDate" Enabled="False" />
-                            <px:PXLayoutRule ID="edMerge41" runat="server" Merge="true" />
+                            <px:PXDateTimeEdit ID="edStdCostDate" runat="server" DataField="StdCostDate" Enabled="False" ></px:PXDateTimeEdit>
+                            <px:PXLayoutRule ID="edMerge41" runat="server" Merge="true" ></px:PXLayoutRule>
                             <px:PXTextEdit ID="edLastStdCostLabel" runat="server" 
                                            Style="background-color: transparent; border-width:0px; padding-left:0px; color:#5c5c5c"
                                            DataField="CurySettings_InventoryItem.LastStdCost_Label" 
                                            SuppressLabel="true" 
                                            Width="104px"  
                                            Enabled="false"
-                                           IsClientControl="false" />
-                            <px:PXNumberEdit ID="edLastStdCost" runat="server" DataField="CurySettings_InventoryItem.LastStdCost" SuppressLabel="true" />
-                            <px:PXLayoutRule ID="edMerge42" runat="server" Merge="false" />
+                                           IsClientControl="false" ></px:PXTextEdit>
+                            <px:PXNumberEdit ID="edLastStdCost" runat="server" DataField="CurySettings_InventoryItem.LastStdCost" SuppressLabel="true" ></px:PXNumberEdit>
+                            <px:PXLayoutRule ID="edMerge42" runat="server" Merge="false" ></px:PXLayoutRule>
                         </Template>
                     </px:PXFormView>
 
-                    <px:PXLayoutRule runat="server" GroupCaption="Cost Statistics" ControlSize="XM" StartGroup="True" />
+                    <px:PXLayoutRule runat="server" GroupCaption="Cost Statistics" ControlSize="XM" StartGroup="True" ></px:PXLayoutRule>
                     <px:PXFormView ID="formCostStats" runat="server" Width="100%" DataMember="itemcosts" DataSourceID="ds" SkinID="Transparent">
                         <Template>
-                            <px:PXLayoutRule ID="edMergeLastCost1" runat="server" Merge="true" />
+                            <px:PXLayoutRule ID="edMergeLastCost1" runat="server" Merge="true" ></px:PXLayoutRule>
                             <px:PXTextEdit ID="edLastCostLable" runat="server" 
                                            Style="background-color: transparent; border-width:0px; padding-left:0px; color:#5c5c5c"
                                            DataField="LastCost_Label" 
                                            SuppressLabel="true" 
                                            Width="104px"  
                                            Enabled="false"
-                                           IsClientControl="false" />
-                            <px:PXNumberEdit ID="edLastCost" runat="server" DataField="LastCost" SuppressLabel="true" />
-                            <px:PXLayoutRule ID="edMergeLastCost2" runat="server" Merge="false" />
+                                           IsClientControl="false" ></px:PXTextEdit>
+                            <px:PXNumberEdit ID="edLastCost" runat="server" DataField="LastCost" SuppressLabel="true" ></px:PXNumberEdit>
+                            <px:PXLayoutRule ID="edMergeLastCost2" runat="server" Merge="false" ></px:PXLayoutRule>
 
-                            <px:PXLayoutRule ID="edMergeAvgCost1" runat="server" Merge="true" />
+                            <px:PXLayoutRule ID="edMergeAvgCost1" runat="server" Merge="true" ></px:PXLayoutRule>
                             <px:PXTextEdit ID="edAvgCostLabel" runat="server" 
                                            Style="background-color: transparent; border-width:0px; padding-left:0px; color:#5c5c5c"
                                            DataField="AvgCost_Label" 
                                            SuppressLabel="true" 
                                            Width="104px"  
                                            Enabled="false"
-                                           IsClientControl="false" />
-                            <px:PXNumberEdit ID="edAvgCost" runat="server" DataField="AvgCost" Enabled="False" SuppressLabel="true" />
-                            <px:PXLayoutRule ID="edMergeAvgCost2" runat="server" Merge="false" />
+                                           IsClientControl="false" ></px:PXTextEdit>
+                            <px:PXNumberEdit ID="edAvgCost" runat="server" DataField="AvgCost" Enabled="False" SuppressLabel="true" ></px:PXNumberEdit>
+                            <px:PXLayoutRule ID="edMergeAvgCost2" runat="server" Merge="false" ></px:PXLayoutRule>
 
-                            <px:PXLayoutRule ID="edMinCostMerge1" runat="server" Merge="true" />
+                            <px:PXLayoutRule ID="edMinCostMerge1" runat="server" Merge="true" ></px:PXLayoutRule>
                             <px:PXTextEdit ID="edMinCostLabel" runat="server" 
                                            Style="background-color: transparent; border-width:0px; padding-left:0px; color:#5c5c5c"
                                            DataField="MinCost_Label" 
                                            SuppressLabel="true" 
                                            Width="104px"  
                                            Enabled="false"
-                                           IsClientControl="false" />
-                            <px:PXNumberEdit ID="edMinCost" runat="server" DataField="MinCost" Enabled="False" SuppressLabel="true" />
-                            <px:PXLayoutRule ID="edMinCostMerge2" runat="server" Merge="false" />
+                                           IsClientControl="false" ></px:PXTextEdit>
+                            <px:PXNumberEdit ID="edMinCost" runat="server" DataField="MinCost" Enabled="False" SuppressLabel="true" ></px:PXNumberEdit>
+                            <px:PXLayoutRule ID="edMinCostMerge2" runat="server" Merge="false" ></px:PXLayoutRule>
 
-                            <px:PXLayoutRule ID="edMaxCostMerge1" runat="server" Merge="true" />
+                            <px:PXLayoutRule ID="edMaxCostMerge1" runat="server" Merge="true" ></px:PXLayoutRule>
                             <px:PXTextEdit ID="edMaxCostLabel" runat="server" 
                                            Style="background-color: transparent; border-width:0px; padding-left:0px; color:#5c5c5c"
                                            DataField="MaxCost_Label" 
                                            SuppressLabel="true" 
                                            Width="104px"  
                                            Enabled="false"
-                                           IsClientControl="false" />
-                            <px:PXNumberEdit ID="edMaxCost" runat="server" DataField="MaxCost" Enabled="False" SuppressLabel="true" />
-                            <px:PXLayoutRule ID="edMaxCostMerge2" runat="server" Merge="false" />
+                                           IsClientControl="false" ></px:PXTextEdit>
+                            <px:PXNumberEdit ID="edMaxCost" runat="server" DataField="MaxCost" Enabled="False" SuppressLabel="true" ></px:PXNumberEdit>
+                            <px:PXLayoutRule ID="edMaxCostMerge2" runat="server" Merge="false" ></px:PXLayoutRule>
                         </Template>
                     </px:PXFormView>
 
                     <px:PXFormView ID="formRUTROTItemSettings" runat="server" Width="100%" DataMember="RUTROTItemSettings" DataSourceID="ds" Caption="Rules" SkinID="Transparent">
                         <Template>
-                            <px:PXLayoutRule runat="server" ID="PXLayoutRuleC1" StartGroup="true" GroupCaption="RUT and ROT Settings" ControlSize="XM" />
+                            <px:PXLayoutRule runat="server" ID="PXLayoutRuleC1" StartGroup="true" GroupCaption="RUT and ROT Settings" ControlSize="XM" ></px:PXLayoutRule>
                             <px:PXGroupBox runat="server" DataField="RUTROTType" CommitChanges="True" RenderStyle="Simple" ID="gbRRType">
-				            <ContentLayout Layout="Stack" Orientation="Horizontal" />
+				            <ContentLayout Layout="Stack" Orientation="Horizontal" ></ContentLayout>
 				            <Template>
-					            <px:PXRadioButton runat="server" Value="O" ID="gbRRType_opO" GroupName="gbRRType" Text="ROT"  />
-					            <px:PXRadioButton runat="server" Value="U" ID="gbRRType_opU" GroupName="gbRRType" Text="RUT" />
+					            <px:PXRadioButton runat="server" Value="O" ID="gbRRType_opO" GroupName="gbRRType" Text="ROT"  ></px:PXRadioButton>
+					            <px:PXRadioButton runat="server" Value="U" ID="gbRRType_opU" GroupName="gbRRType" Text="RUT" ></px:PXRadioButton>
 				            </Template>
                             </px:PXGroupBox>
-                            <px:PXDropDown runat="server" DataField="RUTROTItemType" ID="cmbRUTROTItemType" CommitChanges="true" />
-                            <px:PXSelector runat="server" DataField="RUTROTWorkTypeID" ID="cmbRUTROTWorkType" CommitChanges="true" AutoRefresh="true" />
+                            <px:PXDropDown runat="server" DataField="RUTROTItemType" ID="cmbRUTROTItemType" CommitChanges="true" ></px:PXDropDown>
+                            <px:PXSelector runat="server" DataField="RUTROTWorkTypeID" ID="cmbRUTROTWorkType" CommitChanges="true" AutoRefresh="true" ></px:PXSelector>
                         </Template>
                     </px:PXFormView>
                 </Template>
             </px:PXTabItem>
 			<px:PXTabItem Text="Manufacturing">
 				<Template>
-					<px:PXLayoutRule runat="server" StartColumn="True" />
-					<px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="General" />
-					<px:PXLayoutRule runat="server" Merge="true" />
-					<px:PXSelector runat="server" ID="edAMBOMID" DataField="AMBOMID" />
+					<px:PXLayoutRule runat="server" StartColumn="True" ></px:PXLayoutRule>
+					<px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="General" ></px:PXLayoutRule>
+					<px:PXLayoutRule runat="server" Merge="true" ></px:PXLayoutRule>
+					<px:PXSelector runat="server" ID="edAMBOMID" DataField="AMBOMID" ></px:PXSelector>
                     <px:PXButton runat="server" ID="btnViewBOM" AlreadyLocalized="True" Style="min-width:20px; width:20px; 
                          border-style: none;padding-left:0px;padding-right:0px;height:20px;padding-top:0px; background-color:Transparent;" >
-                        <Images Normal="main@RecordEdit" />
-                        <AutoCallBack Command="ViewBOM" Target="ds" />
+                        <Images Normal="main@RecordEdit" ></Images>
+                        <AutoCallBack Command="ViewBOM" Target="ds" ></AutoCallBack>
                     </px:PXButton>
-                    <px:PXLayoutRule runat="server" />
-                    <px:PXLayoutRule runat="server" Merge="true" />
-					<px:PXSelector runat="server" ID="edAMPlanningBOMID" DataField="AMPlanningBOMID" />
+                    <px:PXLayoutRule runat="server" ></px:PXLayoutRule>
+                    <px:PXLayoutRule runat="server" Merge="true" ></px:PXLayoutRule>
+					<px:PXSelector runat="server" ID="edAMPlanningBOMID" DataField="AMPlanningBOMID" ></px:PXSelector>
                     <px:PXButton runat="server" ID="btnViewPlanningBOM" AlreadyLocalized="True" Style="min-width:20px; width:20px; 
                          border-style: none;padding-left:0px;padding-right:0px;height:20px;padding-top:0px; background-color:Transparent;" >
-                        <Images Normal="main@RecordEdit" />
-                        <AutoCallBack Command="ViewPlanningBOM" Target="ds" />
+                        <Images Normal="main@RecordEdit" ></Images>
+                        <AutoCallBack Command="ViewPlanningBOM" Target="ds" ></AutoCallBack>
                     </px:PXButton>
-                    <px:PXLayoutRule runat="server" />
-					<px:PXSelector runat="server" ID="edAMConfigurationID" DataField="AMConfigurationID" AllowEdit="True"  />
-					<px:PXDropDown runat="server" DataField="AMDefaultMarkFor" ID="edAMDefaultMarkFor" />
-					<px:PXCheckBox runat="server" ID="chkAMMakeToOrderItem" DataField="AMMakeToOrderItem" />
-					<px:PXCheckBox runat="server" ID="chkAMMRPItem" DataField="AMMRPItem" />
-					<px:PXCheckBox runat="server" ID="chkAMQtyRoundUp" DataField="AMQtyRoundUp" />
-                    <px:PXCheckBox runat="server" ID="chkAMCTPItem" DataField="AMCTPItem" />
-					<px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="Replenishments" />
-					<px:PXLayoutRule runat="server" Merge="True" />
-                    <px:PXDropDown runat="server" CommitChanges="True" Size="SM" DataField="AMReplenishmentSource" ID="edAMReplenishmentSource" />
-					<px:PXCheckBox runat="server" CommitChanges="True" DataField="AMReplenishmentSourceOverride" ID="chkAMReplenishmentSourceOverride" />
-					<px:PXLayoutRule runat="server" />
-					<px:PXLayoutRule runat="server" Merge="True" />
-					<px:PXNumberEdit runat="server" CommitChanges="True" DataField="AMSafetyStock" ID="edAMSafetyStock" />
-					<px:PXCheckBox runat="server" CommitChanges="True" DataField="AMSafetyStockOverride" ID="chkAMSafetyStockOverride" />
-					<px:PXLayoutRule runat="server" />
-					<px:PXLayoutRule runat="server" Merge="True" />
-					<px:PXNumberEdit runat="server" CommitChanges="True" DataField="AMMinQty" ID="edAMMinQty" />
-					<px:PXCheckBox runat="server" CommitChanges="True" DataField="AMMinQtyOverride" ID="chkAMMinQtyOverride" />
-					<px:PXLayoutRule runat="server" />
-					<px:PXNumberEdit runat="server" ID="edAMMinOrdQty" DataField="AMMinOrdQty" />
-					<px:PXNumberEdit runat="server" ID="edAMMaxOrdQty" DataField="AMMaxOrdQty" />
-					<px:PXNumberEdit runat="server" ID="edAMLotSize" DataField="AMLotSize" />
-					<px:PXNumberEdit runat="server" ID="edAMMFGLeadTime" DataField="AMMFGLeadTime" />
-					<px:PXLayoutRule runat="server" StartColumn="True" StartGroup="True" GroupCaption="Scrap" />
-					<px:PXLayoutRule runat="server" LabelsWidth="M" ColumnWidth="M" />
-					<px:PXSegmentMask runat="server" ID="edAMScrapSiteID" DataField="AMScrapSiteID" AllowEdit="True" CommitChanges="True" AutoRefresh="True" />
-					<px:PXSegmentMask runat="server" ID="edAMScrapLocationID" DataField="AMScrapLocationID" AllowEdit="True" AutoRefresh="True" CommitChanges="True" />
-					<px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="Scheduling" />
-					<px:PXCheckBox runat="server" DataField="AMCheckSchdMatlAvailability" ID="edAMCheckSchdMatlAvailability" />
-					<px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="MRP Consolidation" LabelsWidth="M" ColumnWidth="M" />
-                    <px:PXLayoutRule runat="server" Merge="True" />
-					<px:PXNumberEdit runat="server" ID="edAMGroupWindow" DataField="AMGroupWindow" />
-                    <px:PXCheckBox runat="server" ID="chkAMGroupWindowOverride" DataField="AMGroupWindowOverride" CommitChanges="True" />
-					<px:PXLayoutRule runat="server" ID="edGeneralLayoutRule8" LabelsWidth="S" ControlSize="XM" />
+                    <px:PXLayoutRule runat="server" ></px:PXLayoutRule>
+					<px:PXSelector runat="server" ID="edAMConfigurationID" DataField="AMConfigurationID" AllowEdit="True"  ></px:PXSelector>
+					<px:PXDropDown runat="server" DataField="AMDefaultMarkFor" ID="edAMDefaultMarkFor" ></px:PXDropDown>
+					<px:PXCheckBox runat="server" ID="chkAMMakeToOrderItem" DataField="AMMakeToOrderItem" ></px:PXCheckBox>
+					<px:PXCheckBox runat="server" ID="chkAMMRPItem" DataField="AMMRPItem" ></px:PXCheckBox>
+					<px:PXCheckBox runat="server" ID="chkAMQtyRoundUp" DataField="AMQtyRoundUp" ></px:PXCheckBox>
+                    <px:PXCheckBox runat="server" ID="chkAMCTPItem" DataField="AMCTPItem" ></px:PXCheckBox>
+					<px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="Replenishments" ></px:PXLayoutRule>
+					<px:PXLayoutRule runat="server" Merge="True" ></px:PXLayoutRule>
+                    <px:PXDropDown runat="server" CommitChanges="True" Size="SM" DataField="AMReplenishmentSource" ID="edAMReplenishmentSource" ></px:PXDropDown>
+					<px:PXCheckBox runat="server" CommitChanges="True" DataField="AMReplenishmentSourceOverride" ID="chkAMReplenishmentSourceOverride" ></px:PXCheckBox>
+					<px:PXLayoutRule runat="server" ></px:PXLayoutRule>
+					<px:PXLayoutRule runat="server" Merge="True" ></px:PXLayoutRule>
+					<px:PXNumberEdit runat="server" CommitChanges="True" DataField="AMSafetyStock" ID="edAMSafetyStock" ></px:PXNumberEdit>
+					<px:PXCheckBox runat="server" CommitChanges="True" DataField="AMSafetyStockOverride" ID="chkAMSafetyStockOverride" ></px:PXCheckBox>
+					<px:PXLayoutRule runat="server" ></px:PXLayoutRule>
+					<px:PXLayoutRule runat="server" Merge="True" ></px:PXLayoutRule>
+					<px:PXNumberEdit runat="server" CommitChanges="True" DataField="AMMinQty" ID="edAMMinQty" ></px:PXNumberEdit>
+					<px:PXCheckBox runat="server" CommitChanges="True" DataField="AMMinQtyOverride" ID="chkAMMinQtyOverride" ></px:PXCheckBox>
+					<px:PXLayoutRule runat="server" ></px:PXLayoutRule>
+					<px:PXNumberEdit runat="server" ID="edAMMinOrdQty" DataField="AMMinOrdQty" ></px:PXNumberEdit>
+					<px:PXNumberEdit runat="server" ID="edAMMaxOrdQty" DataField="AMMaxOrdQty" ></px:PXNumberEdit>
+					<px:PXNumberEdit runat="server" ID="edAMLotSize" DataField="AMLotSize" ></px:PXNumberEdit>
+					<px:PXNumberEdit runat="server" ID="edAMMFGLeadTime" DataField="AMMFGLeadTime" ></px:PXNumberEdit>
+					<px:PXLayoutRule runat="server" StartColumn="True" StartGroup="True" GroupCaption="Scrap" ></px:PXLayoutRule>
+					<px:PXLayoutRule runat="server" LabelsWidth="M" ColumnWidth="M" ></px:PXLayoutRule>
+					<px:PXSegmentMask runat="server" ID="edAMScrapSiteID" DataField="AMScrapSiteID" AllowEdit="True" CommitChanges="True" AutoRefresh="True" ></px:PXSegmentMask>
+					<px:PXSegmentMask runat="server" ID="edAMScrapLocationID" DataField="AMScrapLocationID" AllowEdit="True" AutoRefresh="True" CommitChanges="True" ></px:PXSegmentMask>
+					<px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="Scheduling" ></px:PXLayoutRule>
+					<px:PXCheckBox runat="server" DataField="AMCheckSchdMatlAvailability" ID="edAMCheckSchdMatlAvailability" ></px:PXCheckBox>
+					<px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="MRP Consolidation" LabelsWidth="M" ColumnWidth="M" ></px:PXLayoutRule>
+                    <px:PXLayoutRule runat="server" Merge="True" ></px:PXLayoutRule>
+					<px:PXNumberEdit runat="server" ID="edAMGroupWindow" DataField="AMGroupWindow" ></px:PXNumberEdit>
+                    <px:PXCheckBox runat="server" ID="chkAMGroupWindowOverride" DataField="AMGroupWindowOverride" CommitChanges="True" ></px:PXCheckBox>
+					<px:PXLayoutRule runat="server" ID="edGeneralLayoutRule8" LabelsWidth="S" ControlSize="XM" ></px:PXLayoutRule>
 					<px:PXGrid runat="server" Height="150px" SkinID="Attributes" Width="450px" ID="AMGridAMSubItemDefault" Caption="Sub Item Defaults" MatrixMode="False" DataSourceID="ds" SyncPosition="True">
 						<Levels>
 							<px:PXGridLevel DataMember="AMSubItemDefaults" DataKeyNames="SiteID,InventoryID,SubItemID">
 								<RowTemplate>
-									<px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" />
-									<px:PXSegmentMask runat="server" DataField="SubItemID" ID="edSubItemAMSubItemID" />
-									<px:PXSegmentMask runat="server" DataField="SiteID" ID="edSubItemAMSiteID" />
-									<px:PXCheckBox runat="server" DataField="IsItemDefault" ID="edSubItemAMIsItemDefault" />
-									<px:PXSelector runat="server" DataField="BOMID" ID="edSubItemAMBOMID" AutoRefresh="True" />
-									<px:PXSelector runat="server" DataField="PlanningBOMID" ID="edSubItemAMPlanningBOMID" AutoRefresh="True" />
+									<px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" ></px:PXLayoutRule>
+									<px:PXSegmentMask runat="server" DataField="SubItemID" ID="edSubItemAMSubItemID" ></px:PXSegmentMask>
+									<px:PXSegmentMask runat="server" DataField="SiteID" ID="edSubItemAMSiteID" ></px:PXSegmentMask>
+									<px:PXCheckBox runat="server" DataField="IsItemDefault" ID="edSubItemAMIsItemDefault" ></px:PXCheckBox>
+									<px:PXSelector runat="server" DataField="BOMID" ID="edSubItemAMBOMID" AutoRefresh="True" ></px:PXSelector>
+									<px:PXSelector runat="server" DataField="PlanningBOMID" ID="edSubItemAMPlanningBOMID" AutoRefresh="True" ></px:PXSelector>
                                 </RowTemplate>
 								<Columns>
-									<px:PXGridColumn DataField="SiteID" />
-									<px:PXGridColumn DataField="SubItemID" />
-									<px:PXGridColumn DataField="IsItemDefault" Type="CheckBox" TextAlign="Center" CommitChanges="True" Width="40px" />
-									<px:PXGridColumn DataField="BOMID" />
-									<px:PXGridColumn DataField="PlanningBOMID" />
+									<px:PXGridColumn DataField="SiteID" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="SubItemID" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="IsItemDefault" Type="CheckBox" TextAlign="Center" CommitChanges="True" Width="40px" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="BOMID" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="PlanningBOMID" ></px:PXGridColumn>
 								</Columns>
 							</px:PXGridLevel>
 						</Levels>
@@ -380,135 +380,135 @@
                 <Template>
                     <px:PXGrid ID="grid2" runat="server" DataSourceID="ds" Height="150px" Style="z-index: 100" Width="100%" ActionsPosition="Top" EditPageUrl="~/Pages/IN/IN204500.aspx" BorderWidth="0px" SkinID="Details">
                         <EditPageParams>
-                            <px:PXControlParam ControlID="grid2" Direction="Output" Name="InventoryID" PropertyName="DataValues[&quot;InventoryID&quot;]" Type="String" />
-                            <px:PXControlParam ControlID="grid2" Direction="Output" Name="SiteID" PropertyName="DataValues[&quot;SiteID&quot;]" Type="String" />
+                            <px:PXControlParam ControlID="grid2" Direction="Output" Name="InventoryID" PropertyName="DataValues[&quot;InventoryID&quot;]" Type="String" ></px:PXControlParam>
+                            <px:PXControlParam ControlID="grid2" Direction="Output" Name="SiteID" PropertyName="DataValues[&quot;SiteID&quot;]" Type="String" ></px:PXControlParam>
                         </EditPageParams>
                         <ActionBar>
                             <CustomItems>
                                 <px:PXToolBarButton>
-                                    <AutoCallBack Command="AddWarehouseDetail" Target="ds" />
+                                    <AutoCallBack Command="AddWarehouseDetail" Target="ds" ></AutoCallBack>
                                 </px:PXToolBarButton>
                             </CustomItems>
                         </ActionBar>
                         <Levels>
                             <px:PXGridLevel DataMember="itemsiterecords" DataKeyNames="InventoryID,SiteID">
                                 <RowTemplate>
-                                    <px:PXLayoutRule ID="PXLayoutRule1" runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" />
-                                    <px:PXSegmentMask ID="edPreferredVendorID" runat="server" DataField="PreferredVendorID" Enabled="False" AllowEdit="True" />
-                                    <px:PXSegmentMask SuppressLabel="True" Size="s" ID="edSiteID2" runat="server" DataField="SiteID" AllowEdit="True" TextField="INSite__SiteCD" />
-                                    <px:PXSegmentMask SuppressLabel="True" Size="s" ID="edInvtAcctID2" runat="server" DataField="InvtAcctID" />
-                                    <px:PXSegmentMask SuppressLabel="True" Size="s" ID="edDfltShipLocationID2" runat="server" DataField="DfltShipLocationID" AutoRefresh="True" />
-                                    <px:PXSegmentMask SuppressLabel="True" Size="xm" ID="edInvtSubID2" runat="server" DataField="InvtSubID" />
-                                    <px:PXSegmentMask SuppressLabel="True" ID="edDfltReceiptLocationID2" runat="server" DataField="DfltReceiptLocationID" AutoRefresh="True" />
+                                    <px:PXLayoutRule ID="PXLayoutRule1" runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" ></px:PXLayoutRule>
+                                    <px:PXSegmentMask ID="edPreferredVendorID" runat="server" DataField="PreferredVendorID" Enabled="False" AllowEdit="True" ></px:PXSegmentMask>
+                                    <px:PXSegmentMask SuppressLabel="True" Size="s" ID="edSiteID2" runat="server" DataField="SiteID" AllowEdit="True" TextField="INSite__SiteCD" ></px:PXSegmentMask>
+                                    <px:PXSegmentMask SuppressLabel="True" Size="s" ID="edInvtAcctID2" runat="server" DataField="InvtAcctID" ></px:PXSegmentMask>
+                                    <px:PXSegmentMask SuppressLabel="True" Size="s" ID="edDfltShipLocationID2" runat="server" DataField="DfltShipLocationID" AutoRefresh="True" ></px:PXSegmentMask>
+                                    <px:PXSegmentMask SuppressLabel="True" Size="xm" ID="edInvtSubID2" runat="server" DataField="InvtSubID" ></px:PXSegmentMask>
+                                    <px:PXSegmentMask SuppressLabel="True" ID="edDfltReceiptLocationID2" runat="server" DataField="DfltReceiptLocationID" AutoRefresh="True" ></px:PXSegmentMask>
                                 </RowTemplate>
                                 <Columns>
-                                    <px:PXGridColumn DataField="IsDefault" TextAlign="Center" Type="CheckBox" Width="60px" />
+                                    <px:PXGridColumn DataField="IsDefault" TextAlign="Center" Type="CheckBox" Width="60px" ></px:PXGridColumn>
                                     <px:PXGridColumn DataField="SiteID" PopupCommandTarget="ds" PopupCommand="Cancel">
                                         <NavigateParams>
-                                            <px:PXControlParam ControlID="grid2" Direction="Output" Name="SiteID" PropertyName="DataValues[&quot;SiteID&quot;]" Type="String" />
-                                            <px:PXControlParam ControlID="grid2" Direction="Output" Name="InventoryID" PropertyName="DataValues[&quot;InventoryID&quot;]" Type="String" />
+                                            <px:PXControlParam ControlID="grid2" Direction="Output" Name="SiteID" PropertyName="DataValues[&quot;SiteID&quot;]" Type="String" ></px:PXControlParam>
+                                            <px:PXControlParam ControlID="grid2" Direction="Output" Name="InventoryID" PropertyName="DataValues[&quot;InventoryID&quot;]" Type="String" ></px:PXControlParam>
                                         </NavigateParams>
                                     </px:PXGridColumn>
-                                    <px:PXGridColumn DataField="DfltReceiptLocationID" />
-                                    <px:PXGridColumn DataField="DfltShipLocationID" />
-                                    <px:PXGridColumn DataField="SiteStatus" Type="DropDownList" />
-                                    <px:PXGridColumn DataField="InvtAcctID" />
-                                    <px:PXGridColumn DataField="InvtSubID" />
-									<px:PXGridColumn DataField="ProductManagerOverride" TextAlign="Center" Type="CheckBox" Width="70px" />
-                                    <px:PXGridColumn DataField="ProductWorkgroupID" />
-                                    <px:PXGridColumn DataField="ProductManagerID" />
-                                    <px:PXGridColumn DataField="StdCostOverride" TextAlign="Center" Type="CheckBox" Width="60px" />
-                                    <px:PXGridColumn DataField="BasePriceOverride" TextAlign="Center" Type="CheckBox" Width="60px" />
-                                    <px:PXGridColumn DataField="INSiteStatusSummary__QtyOnHand" TextAlign="Right" Width="100px" />
-                                    <px:PXGridColumn DataField="PreferredVendorOverride" Label="Preferred Vendor Override" TextAlign="Center" Type="CheckBox" Width="60px" />
-                                    <px:PXGridColumn DataField="PreferredVendorID" Width="81px" />
-                                    <px:PXGridColumn DataField="ReplenishmentPolicyOverride" Label="Replenishment Policy Override" TextAlign="Center" Type="CheckBox" Width="90px" />
-                                    <px:PXGridColumn DataField="ReplenishmentPolicyID" Label="Seasonality" Width="90px" />
-                                    <px:PXGridColumn DataField="ReplenishmentSource" Label="Replenishment Source" RenderEditorText="True" Width="90px" />
-									<px:PXGridColumn DataField="ReplenishmentSourceSiteID" Label="Replenishment Warehouse" Width="90px" />
-                                    <px:PXGridColumn DataField="ServiceLevelOverride" Label="Service Level Override" TextAlign="Center" Type="CheckBox" Width="60px" />
-                                    <px:PXGridColumn DataField="ServiceLevelPct" Label="Service Level" Width="90px" />
-                                    <px:PXGridColumn DataField="LastForecastDate" Label="LastForecastDate" Width="140px" />
-                                    <px:PXGridColumn DataField="DemandPerDayAverage" Label="Demand Per Day Forecast" Width="60px" />
-                                    <px:PXGridColumn DataField="DemandPerDaySTDEV" Label="Demand Per Day Error (STDEV)" Width="80px" />
+                                    <px:PXGridColumn DataField="DfltReceiptLocationID" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="DfltShipLocationID" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="SiteStatus" Type="DropDownList" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="InvtAcctID" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="InvtSubID" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="ProductManagerOverride" TextAlign="Center" Type="CheckBox" Width="70px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="ProductWorkgroupID" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="ProductManagerID" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="StdCostOverride" TextAlign="Center" Type="CheckBox" Width="60px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="BasePriceOverride" TextAlign="Center" Type="CheckBox" Width="60px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="INSiteStatusSummary__QtyOnHand" TextAlign="Right" Width="100px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="PreferredVendorOverride" Label="Preferred Vendor Override" TextAlign="Center" Type="CheckBox" Width="60px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="PreferredVendorID" Width="81px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="ReplenishmentPolicyOverride" Label="Replenishment Policy Override" TextAlign="Center" Type="CheckBox" Width="90px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="ReplenishmentPolicyID" Label="Seasonality" Width="90px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="ReplenishmentSource" Label="Replenishment Source" RenderEditorText="True" Width="90px" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="ReplenishmentSourceSiteID" Label="Replenishment Warehouse" Width="90px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="ServiceLevelOverride" Label="Service Level Override" TextAlign="Center" Type="CheckBox" Width="60px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="ServiceLevelPct" Label="Service Level" Width="90px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="LastForecastDate" Label="LastForecastDate" Width="140px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="DemandPerDayAverage" Label="Demand Per Day Forecast" Width="60px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="DemandPerDaySTDEV" Label="Demand Per Day Error (STDEV)" Width="80px" ></px:PXGridColumn>
                                 </Columns>
                             </px:PXGridLevel>
                         </Levels>
-                        <AutoSize Enabled="True" MinHeight="150" />
+                        <AutoSize Enabled="True" MinHeight="150" ></AutoSize>
                     </px:PXGrid>
                 </Template>
             </px:PXTabItem>
             <px:PXTabItem Text="Vendors" LoadOnDemand="true">
                 <Template>
                     <px:PXGrid ID="PXGridVendorItems" runat="server" DataSourceID="ds" Height="100%" Width="100%" SkinID="DetailsInTab" SyncPosition="true">
-                        <Mode InitNewRow="True" />
+                        <Mode InitNewRow="True" ></Mode>
                         <Levels>
                             <px:PXGridLevel DataMember="VendorItems" DataKeyNames="RecordID">
                                 <RowTemplate>
-                                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" />
-                                    <px:PXSegmentMask ID="edVendorID" runat="server" DataField="VendorID" AllowEdit="True" />
-                                    <px:PXSegmentMask Size="xxs" ID="vp_edSubItemID" runat="server" DataField="SubItemID" AutoRefresh="True" />
-                                    <px:PXSegmentMask ID="edLocation__VSiteID" runat="server" DataField="Location__VSiteID" AllowEdit="true" />
-                                    <px:PXSegmentMask ID="edVendorLocationID" runat="server" DataField="VendorLocationID" AutoRefresh="True" AllowEdit="True" />
-                                    <px:PXMaskEdit ID="edVendorInventoryID" runat="server" DataField="VendorInventoryID" />
-                                    <px:PXNumberEdit ID="edAddLeadTimeDays" runat="server" DataField="AddLeadTimeDays" />
-                                    <px:PXCheckBox ID="vp_chkActive" runat="server" Checked="True" DataField="Active" />
-                                    <px:PXNumberEdit ID="edMinOrdFreq" runat="server" DataField="MinOrdFreq" />
-                                    <px:PXNumberEdit ID="edMinOrdQty" runat="server" DataField="MinOrdQty" />
-                                    <px:PXNumberEdit ID="edMaxOrdQty" runat="server" DataField="MaxOrdQty" />
-                                    <px:PXNumberEdit ID="edLotSize" runat="server" DataField="LotSize" />
-                                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" />
-                                    <px:PXNumberEdit ID="edERQ" runat="server" DataField="ERQ" />
-                                    <px:PXSelector ID="edCuryID" runat="server" DataField="CuryID" />
-                                    <px:PXNumberEdit ID="edLastPrice" runat="server" DataField="LastPrice" Enabled="False" />
-                                    <px:PXCheckBox ID="chkIsDefault" runat="server" DataField="IsDefault" />
-                                    <px:PXTextEdit ID="edVendor__AcctName" runat="server" DataField="Vendor__AcctName" />
-                                    <px:PXNumberEdit ID="edLocation__VLeadTime" runat="server" DataField="Location__VLeadTime" />
+                                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" ></px:PXLayoutRule>
+                                    <px:PXSegmentMask ID="edVendorID" runat="server" DataField="VendorID" AllowEdit="True" ></px:PXSegmentMask>
+                                    <px:PXSegmentMask Size="xxs" ID="vp_edSubItemID" runat="server" DataField="SubItemID" AutoRefresh="True" ></px:PXSegmentMask>
+                                    <px:PXSegmentMask ID="edLocation__VSiteID" runat="server" DataField="Location__VSiteID" AllowEdit="true" ></px:PXSegmentMask>
+                                    <px:PXSegmentMask ID="edVendorLocationID" runat="server" DataField="VendorLocationID" AutoRefresh="True" AllowEdit="True" ></px:PXSegmentMask>
+                                    <px:PXMaskEdit ID="edVendorInventoryID" runat="server" DataField="VendorInventoryID" ></px:PXMaskEdit>
+                                    <px:PXNumberEdit ID="edAddLeadTimeDays" runat="server" DataField="AddLeadTimeDays" ></px:PXNumberEdit>
+                                    <px:PXCheckBox ID="vp_chkActive" runat="server" Checked="True" DataField="Active" ></px:PXCheckBox>
+                                    <px:PXNumberEdit ID="edMinOrdFreq" runat="server" DataField="MinOrdFreq" ></px:PXNumberEdit>
+                                    <px:PXNumberEdit ID="edMinOrdQty" runat="server" DataField="MinOrdQty" ></px:PXNumberEdit>
+                                    <px:PXNumberEdit ID="edMaxOrdQty" runat="server" DataField="MaxOrdQty" ></px:PXNumberEdit>
+                                    <px:PXNumberEdit ID="edLotSize" runat="server" DataField="LotSize" ></px:PXNumberEdit>
+                                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" ></px:PXLayoutRule>
+                                    <px:PXNumberEdit ID="edERQ" runat="server" DataField="ERQ" ></px:PXNumberEdit>
+                                    <px:PXSelector ID="edCuryID" runat="server" DataField="CuryID" ></px:PXSelector>
+                                    <px:PXNumberEdit ID="edLastPrice" runat="server" DataField="LastPrice" Enabled="False" ></px:PXNumberEdit>
+                                    <px:PXCheckBox ID="chkIsDefault" runat="server" DataField="IsDefault" ></px:PXCheckBox>
+                                    <px:PXTextEdit ID="edVendor__AcctName" runat="server" DataField="Vendor__AcctName" ></px:PXTextEdit>
+                                    <px:PXNumberEdit ID="edLocation__VLeadTime" runat="server" DataField="Location__VLeadTime" ></px:PXNumberEdit>
                                 </RowTemplate>
                                 <Columns>
-                                    <px:PXGridColumn DataField="Active" TextAlign="Center" Type="CheckBox" Width="45px" />
-                                    <px:PXGridColumn DataField="IsDefault" TextAlign="Center" Type="CheckBox" Width="45px" />
-                                    <px:PXGridColumn DataField="VendorID" Width="81px" CommitChanges="True" LinkCommand="ViewVendorEmployee"/>
-                                    <px:PXGridColumn DataField="Vendor__AcctName" Width="210px" />
-                                    <px:PXGridColumn DataField="VendorLocationID" Width="54px" CommitChanges="True" LinkCommand="ViewVendorLocation"/>
-                                    <px:PXGridColumn DataField="Location__VSiteID" Width="81px" />
-                                    <px:PXGridColumn DataField="SubItemID" AutoCallBack="True" />
-                                    <px:PXGridColumn DataField="PurchaseUnit" Width="63px" />
-                                    <px:PXGridColumn DataField="VendorInventoryID" Width="90px" AutoCallBack="True" />
-                                    <px:PXGridColumn DataField="Location__VLeadTime" Width="90px" TextAlign="Right" />
-                                    <px:PXGridColumn DataField="OverrideSettings" TextAlign="Center" Type="CheckBox" Width="60px" AutoCallBack="True" />
-                                    <px:PXGridColumn DataField="AddLeadTimeDays" TextAlign="Right" Width="90px" />
-                                    <px:PXGridColumn DataField="MinOrdFreq" TextAlign="Right" Width="84px" />
-                                    <px:PXGridColumn DataField="MinOrdQty" TextAlign="Right" Width="81px" />
-                                    <px:PXGridColumn DataField="MaxOrdQty" TextAlign="Right" Width="81px" />
-                                    <px:PXGridColumn DataField="LotSize" TextAlign="Right" Width="81px" />
-                                    <px:PXGridColumn DataField="ERQ" TextAlign="Right" Width="81px" />
-                                    <px:PXGridColumn DataField="CuryID" Width="54px" />
-                                    <px:PXGridColumn DataField="LastPrice" TextAlign="Right" Width="99px" />
-                                    <px:PXGridColumn DataField="PrepaymentPct" TextAlign="Right" AllowNull="True" />
+                                    <px:PXGridColumn DataField="Active" TextAlign="Center" Type="CheckBox" Width="45px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="IsDefault" TextAlign="Center" Type="CheckBox" Width="45px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="VendorID" Width="81px" CommitChanges="True" LinkCommand="ViewVendorEmployee"></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="Vendor__AcctName" Width="210px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="VendorLocationID" Width="54px" CommitChanges="True" LinkCommand="ViewVendorLocation"></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="Location__VSiteID" Width="81px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="SubItemID" AutoCallBack="True" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="PurchaseUnit" Width="63px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="VendorInventoryID" Width="90px" AutoCallBack="True" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="Location__VLeadTime" Width="90px" TextAlign="Right" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="OverrideSettings" TextAlign="Center" Type="CheckBox" Width="60px" AutoCallBack="True" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="AddLeadTimeDays" TextAlign="Right" Width="90px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="MinOrdFreq" TextAlign="Right" Width="84px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="MinOrdQty" TextAlign="Right" Width="81px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="MaxOrdQty" TextAlign="Right" Width="81px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="LotSize" TextAlign="Right" Width="81px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="ERQ" TextAlign="Right" Width="81px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="CuryID" Width="54px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="LastPrice" TextAlign="Right" Width="99px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="PrepaymentPct" TextAlign="Right" AllowNull="True" ></px:PXGridColumn>
                                 </Columns>
                             </px:PXGridLevel>
                         </Levels>
-                        <AutoSize Enabled="True" />
+                        <AutoSize Enabled="True" ></AutoSize>
                     </px:PXGrid>
                 </Template>
             </px:PXTabItem>
             <px:PXTabItem Text="Attributes">
                 <Template>
-                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="S" ControlSize="XM" />
+                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="S" ControlSize="XM" ></px:PXLayoutRule>
                     <px:PXGrid ID="PXGridAnswers" runat="server" Caption="Attributes" DataSourceID="ds" Height="150px" MatrixMode="True" Width="420px" SkinID="Attributes">
                         <Levels>
                             <px:PXGridLevel DataKeyNames="AttributeID,EntityType,EntityID" DataMember="Answers">
                                 <RowTemplate>
-                                    <px:PXLayoutRule runat="server" ControlSize="XM" LabelsWidth="M" StartColumn="True" />
-                                    <px:PXTextEdit ID="edParameterID" runat="server" DataField="AttributeID" Enabled="False" />
-                                    <px:PXTextEdit ID="edAnswerValue" runat="server" DataField="Value" />
+                                    <px:PXLayoutRule runat="server" ControlSize="XM" LabelsWidth="M" StartColumn="True" ></px:PXLayoutRule>
+                                    <px:PXTextEdit ID="edParameterID" runat="server" DataField="AttributeID" Enabled="False" ></px:PXTextEdit>
+                                    <px:PXTextEdit ID="edAnswerValue" runat="server" DataField="Value" ></px:PXTextEdit>
                                 </RowTemplate>
                                 <Columns>
-                                    <px:PXGridColumn AllowShowHide="False" DataField="AttributeID" TextField="AttributeID_description" TextAlign="Left" Width="135px" />
-                                    <px:PXGridColumn DataField="isRequired" TextAlign="Center" Type="CheckBox" Width="80px" />
-									<px:PXGridColumn DataField="AttributeCategory" Type="DropDownList" />
-                                    <px:PXGridColumn DataField="Value" Width="185px" />
+                                    <px:PXGridColumn AllowShowHide="False" DataField="AttributeID" TextField="AttributeID_description" TextAlign="Left" Width="135px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="isRequired" TextAlign="Center" Type="CheckBox" Width="80px" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="AttributeCategory" Type="DropDownList" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="Value" Width="185px" ></px:PXGridColumn>
                                 </Columns>
                             </px:PXGridLevel>
                         </Levels>
@@ -518,64 +518,64 @@
                         <Levels>
                             <px:PXGridLevel DataMember="Category">
                                 <RowTemplate>
-                                    <px:PXLayoutRule ID="PXLayoutRule2" runat="server" StartColumn="True" LabelsWidth="SM" ControlSize="XM" />
+                                    <px:PXLayoutRule ID="PXLayoutRule2" runat="server" StartColumn="True" LabelsWidth="SM" ControlSize="XM" ></px:PXLayoutRule>
                                     <px:PXTreeSelector ID="edParent" runat="server" DataField="CategoryID" PopulateOnDemand="True"
                                         AutoRefresh="true" ShowRootNode="False" TreeDataSourceID="ds" TreeDataMember="Categories" CommitChanges="true">
                                         <DataBindings>
-                                            <px:PXTreeItemBinding TextField="Description" ValueField="CategoryID" />
+                                            <px:PXTreeItemBinding TextField="Description" ValueField="CategoryID" ></px:PXTreeItemBinding>
                                         </DataBindings>
                                     </px:PXTreeSelector>
                                 </RowTemplate>
                                 <Columns>
-                                    <px:PXGridColumn DataField="CategoryID" Width="220px" TextField="INCategory__Description" AllowResize="False"/>
+                                    <px:PXGridColumn DataField="CategoryID" Width="220px" TextField="INCategory__Description" AllowResize="False"></px:PXGridColumn>
                                 </Columns>
-                                <Layout FormViewHeight="" />
+                                <Layout FormViewHeight="" ></Layout>
                             </px:PXGridLevel>
                         </Levels>
                     </px:PXGrid>
-                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="S" ControlSize="XM" />
+                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="S" ControlSize="XM" ></px:PXLayoutRule>
                     <px:PXImageUploader Height="320px" Width="430px" ID="imgUploader" runat="server" DataField="ImageUrl" AllowUpload="true" ShowComment="true" DataMember="ItemSettings"
-						 />
+						 ></px:PXImageUploader>
                 </Template>
             </px:PXTabItem>
             <px:PXTabItem Text="Packaging">
                 <Template>
-                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="SM" ControlSize="SM" />
-                    <px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="Dimensions" />
-                    <px:PXNumberEdit ID="edBaseItemWeight" runat="server" DataField="BaseItemWeight" />
-                    <px:PXSelector ID="edWeightUOM" runat="server" DataField="WeightUOM" Size="S" AutoRefresh="true" />
-                    <px:PXNumberEdit ID="edBaseItemVolume" runat="server" DataField="BaseItemVolume" />
-                    <px:PXSelector ID="edVolumeUOM" runat="server" DataField="VolumeUOM" Size="S" AutoRefresh="true" />
-                    <px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="International Shipping" />
-                    <px:PXTextEdit runat="server" ID="edHSTariffCode" DataField="HSTariffCode" />
-					<px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="Shipping Thresholds" />
-					<px:PXNumberEdit ID="edUndershipThreshold" runat="server" DataField="UndershipThreshold" />
-					<px:PXNumberEdit ID="edOvershipThreshold" runat="server" DataField="OvershipThreshold" />
-                    <px:PXLayoutRule runat="server" StartColumn="True" />
-                    <px:PXLayoutRule ID="PXLayoutRule5" runat="server" StartGroup="True" GroupCaption="Automatic Packaging" />
-                    <px:PXLayoutRule ID="PXLayoutRule6" runat="server" Merge="True" />
-                    <px:PXDropDown ID="edPackageOption" runat="server" DataField="PackageOption" CommitChanges="true" AllowNull="False" />
-                    <px:PXCheckBox ID="edPackSeparately" DataField="PackSeparately" runat="server" />
-                    <px:PXLayoutRule ID="PXLayoutRule7" runat="server" Merge="False" />
+                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="SM" ControlSize="SM" ></px:PXLayoutRule>
+                    <px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="Dimensions" ></px:PXLayoutRule>
+                    <px:PXNumberEdit ID="edBaseItemWeight" runat="server" DataField="BaseItemWeight" ></px:PXNumberEdit>
+                    <px:PXSelector ID="edWeightUOM" runat="server" DataField="WeightUOM" Size="S" AutoRefresh="true" ></px:PXSelector>
+                    <px:PXNumberEdit ID="edBaseItemVolume" runat="server" DataField="BaseItemVolume" ></px:PXNumberEdit>
+                    <px:PXSelector ID="edVolumeUOM" runat="server" DataField="VolumeUOM" Size="S" AutoRefresh="true" ></px:PXSelector>
+                    <px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="International Shipping" ></px:PXLayoutRule>
+                    <px:PXTextEdit runat="server" ID="edHSTariffCode" DataField="HSTariffCode" ></px:PXTextEdit>
+					<px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="Shipping Thresholds" ></px:PXLayoutRule>
+					<px:PXNumberEdit ID="edUndershipThreshold" runat="server" DataField="UndershipThreshold" ></px:PXNumberEdit>
+					<px:PXNumberEdit ID="edOvershipThreshold" runat="server" DataField="OvershipThreshold" ></px:PXNumberEdit>
+                    <px:PXLayoutRule runat="server" StartColumn="True" ></px:PXLayoutRule>
+                    <px:PXLayoutRule ID="PXLayoutRule5" runat="server" StartGroup="True" GroupCaption="Automatic Packaging" ></px:PXLayoutRule>
+                    <px:PXLayoutRule ID="PXLayoutRule6" runat="server" Merge="True" ></px:PXLayoutRule>
+                    <px:PXDropDown ID="edPackageOption" runat="server" DataField="PackageOption" CommitChanges="true" AllowNull="False" ></px:PXDropDown>
+                    <px:PXCheckBox ID="edPackSeparately" DataField="PackSeparately" runat="server" ></px:PXCheckBox>
+                    <px:PXLayoutRule ID="PXLayoutRule7" runat="server" Merge="False" ></px:PXLayoutRule>
                     <px:PXGrid ID="PXGridBoxes" runat="server" Caption="Boxes" DataSourceID="ds" Height="130px" Width="420px" SkinID="ShortList" FilesIndicator="False" NoteIndicator="false">
                         <Levels>
                             <px:PXGridLevel DataMember="Boxes">
                                 <RowTemplate>
-                                    <px:PXLayoutRule runat="server" ControlSize="XM" LabelsWidth="SM" StartColumn="True" />
-                                    <px:PXSelector ID="edBoxID" runat="server" DataField="BoxID" />
-                                    <px:PXSelector ID="edUOM_box" runat="server" DataField="UOM" />
-                                    <px:PXNumberEdit ID="edQty_box" runat="server" DataField="Qty" />
+                                    <px:PXLayoutRule runat="server" ControlSize="XM" LabelsWidth="SM" StartColumn="True" ></px:PXLayoutRule>
+                                    <px:PXSelector ID="edBoxID" runat="server" DataField="BoxID" ></px:PXSelector>
+                                    <px:PXSelector ID="edUOM_box" runat="server" DataField="UOM" ></px:PXSelector>
+                                    <px:PXNumberEdit ID="edQty_box" runat="server" DataField="Qty" ></px:PXNumberEdit>
                                 </RowTemplate>
                                 <Columns>
-                                    <px:PXGridColumn DataField="BoxID" Width="91px" CommitChanges="True" />
-                                    <px:PXGridColumn DataField="Description" Width="91px" />
-                                    <px:PXGridColumn DataField="UOM" Width="54px" CommitChanges="True" />
-                                    <px:PXGridColumn DataField="Qty" TextAlign="Right" Width="54px" />
-                                    <px:PXGridColumn DataField="MaxWeight" Width="54px" />
-                                    <px:PXGridColumn DataField="MaxVolume" Width="54px" />
-                                    <px:PXGridColumn DataField="MaxQty" TextAlign="Right" Width="54px" />
+                                    <px:PXGridColumn DataField="BoxID" Width="91px" CommitChanges="True" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="Description" Width="91px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="UOM" Width="54px" CommitChanges="True" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="Qty" TextAlign="Right" Width="54px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="MaxWeight" Width="54px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="MaxVolume" Width="54px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="MaxQty" TextAlign="Right" Width="54px" ></px:PXGridColumn>
                                 </Columns>
-                                <Layout FormViewHeight="" />
+                                <Layout FormViewHeight="" ></Layout>
                             </px:PXGridLevel>
                         </Levels>
                     </px:PXGrid>
@@ -587,30 +587,30 @@
                         <Levels>
                             <px:PXGridLevel DataMember="itemxrefrecords" DataKeyNames="InventoryID,SubItemID,AlternateType,BAccountID,AlternateID">
                                 <Columns>
-                                    <px:PXGridColumn DataField="SubItemID" Width="135px" CommitChanges="true" />
-                                    <px:PXGridColumn DataField="AlternateType" Type="DropDownList" Width="135px" CommitChanges="true"/>
-                                    <px:PXGridColumn DataField="BAccountID" Width="135px" CommitChanges="true" LinkCommand="ViewBAccount"/>
-                                    <px:PXGridColumn DataField="AlternateID" Width="180px" CommitChanges="true" />
-                                    <px:PXGridColumn DataField="UOM" Width="70px" CommitChanges="true" />
-                                    <px:PXGridColumn DataField="Descr" Width="351px" />
+                                    <px:PXGridColumn DataField="SubItemID" Width="135px" CommitChanges="true" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="AlternateType" Type="DropDownList" Width="135px" CommitChanges="true"></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="BAccountID" Width="135px" CommitChanges="true" LinkCommand="ViewBAccount"></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="AlternateID" Width="180px" CommitChanges="true" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="UOM" Width="70px" CommitChanges="true" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="Descr" Width="351px" ></px:PXGridColumn>
                                 </Columns>
                                 <RowTemplate>
-                                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" />
+                                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" ></px:PXLayoutRule>
                                     <px:PXSegmentMask ID="edBAccountID" runat="server" DataField="BAccountID" AutoRefresh="True" AllowEdit="True" >
                                         <Parameters>
-                                            <px:PXControlParam ControlID="crossgrid" Name="INItemXRef.alternateType" PropertyName="DataValues[&quot;AlternateType&quot;]" />
+                                            <px:PXControlParam ControlID="crossgrid" Name="INItemXRef.alternateType" PropertyName="DataValues[&quot;AlternateType&quot;]" ></px:PXControlParam>
                                         </Parameters>
                                     </px:PXSegmentMask>
-                                    <px:PXSelector ID="edxUOM" runat="server" Size="s" DataField="UOM" AllowEdit="True" AutoRefresh="True" />
-                                    <px:PXSegmentMask SuppressLabel="True" ID="edSubItemID" runat="server" DataField="SubItemID" AutoRefresh="True" />
-                                    <px:PXTextEdit ID="edAlternateID" runat="server" DataField="AlternateID" />
-                                    <px:PXTextEdit ID="edDescr" runat="server" DataField="Descr" />
+                                    <px:PXSelector ID="edxUOM" runat="server" Size="s" DataField="UOM" AllowEdit="True" AutoRefresh="True" ></px:PXSelector>
+                                    <px:PXSegmentMask SuppressLabel="True" ID="edSubItemID" runat="server" DataField="SubItemID" AutoRefresh="True" ></px:PXSegmentMask>
+                                    <px:PXTextEdit ID="edAlternateID" runat="server" DataField="AlternateID" ></px:PXTextEdit>
+                                    <px:PXTextEdit ID="edDescr" runat="server" DataField="Descr" ></px:PXTextEdit>
                                 </RowTemplate>
-                                <Layout FormViewHeight="" />
+                                <Layout FormViewHeight="" ></Layout>
                             </px:PXGridLevel>
                         </Levels>
-                        <Mode InitNewRow="true" />
-                        <AutoSize Enabled="True" MinHeight="150" />
+                        <Mode InitNewRow="true" ></Mode>
+                        <AutoSize Enabled="True" MinHeight="150" ></AutoSize>
                     </px:PXGrid>
                 </Template>
             </px:PXTabItem>
@@ -622,39 +622,39 @@
 			<Levels>
 				<px:PXGridLevel DataMember="RelatedItems" DataKeyNames="InventoryID,Relation" ImportDataMember="RelatedItems">
 					<Columns>
-						<px:PXGridColumn DataField="Relation" CommitChanges="true" Type="DropDownList" />
-						<px:PXGridColumn DataField="Rank" CommitChanges="true"/>
-						<px:PXGridColumn DataField="Tag" CommitChanges="true" Type="DropDownList" />
-						<px:PXGridColumn DataField="RelatedInventoryID" CommitChanges="true" LinkCommand="ViewRelatedItem" />
-						<px:PXGridColumn DataField="Desc" />
-						<px:PXGridColumn DataField="UOM" DisplayFormat="&gt;aaaaaa" CommitChanges="true" />
-						<px:PXGridColumn DataField="Qty" />
-						<px:PXGridColumn DataField="EffectiveDate" CommitChanges="true" />
-						<px:PXGridColumn DataField="ExpirationDate" CommitChanges="true" />
-						<px:PXGridColumn DataField="Interchangeable" TextAlign="Center" Type="CheckBox" />
-						<px:PXGridColumn DataField="Required" TextAlign="Center" Type="CheckBox" CommitChanges="true" />
-						<px:PXGridColumn DataField="IsActive" TextAlign="Center" Type="CheckBox" CommitChanges="true" />
+						<px:PXGridColumn DataField="Relation" CommitChanges="true" Type="DropDownList" ></px:PXGridColumn>
+						<px:PXGridColumn DataField="Rank" CommitChanges="true"></px:PXGridColumn>
+						<px:PXGridColumn DataField="Tag" CommitChanges="true" Type="DropDownList" ></px:PXGridColumn>
+						<px:PXGridColumn DataField="RelatedInventoryID" CommitChanges="true" LinkCommand="ViewRelatedItem" ></px:PXGridColumn>
+						<px:PXGridColumn DataField="Desc" ></px:PXGridColumn>
+						<px:PXGridColumn DataField="UOM" DisplayFormat="&gt;aaaaaa" CommitChanges="true" ></px:PXGridColumn>
+						<px:PXGridColumn DataField="Qty" ></px:PXGridColumn>
+						<px:PXGridColumn DataField="EffectiveDate" CommitChanges="true" ></px:PXGridColumn>
+						<px:PXGridColumn DataField="ExpirationDate" CommitChanges="true" ></px:PXGridColumn>
+						<px:PXGridColumn DataField="Interchangeable" TextAlign="Center" Type="CheckBox" ></px:PXGridColumn>
+						<px:PXGridColumn DataField="Required" TextAlign="Center" Type="CheckBox" CommitChanges="true" ></px:PXGridColumn>
+						<px:PXGridColumn DataField="IsActive" TextAlign="Center" Type="CheckBox" CommitChanges="true" ></px:PXGridColumn>
 					</Columns>
 					<RowTemplate>
-						<px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" />
-						<px:PXDropDown ID="edRelation" runat="server" DataField="Relation" CommitChanges="true" />
-						<px:PXNumberEdit ID="edRank" runat="server" DataField="Rank" CommitChanges="true" />
-						<px:PXDropDown ID="edTag" runat="server" DataField="Tag" CommitChanges="true" />
-						<px:PXSelector ID="edRelatedInventoryID" runat="server" DataField="RelatedInventoryID" AllowEdit="True" CommitChanges="true" />
-						<px:PXTextEdit ID="edRelatedInventoryDesc" runat="server" DataField="Desc" Enabled="False" />
-						<px:PXSelector ID="edRelatedInventoryUOM" runat="server" Size="s" DataField="UOM" AutoRefresh="True" CommitChanges="true" />
-						<px:PXNumberEdit ID="edRelatedItemQty" runat="server" DataField="Qty" />
-						<px:PXDateTimeEdit ID="edEffectiveDate" runat="server" DataField="EffectiveDate" />
-						<px:PXDateTimeEdit ID="edExpirationDate" runat="server" DataField="ExpirationDate" />
-						<px:PXCheckBox ID="edInterchangeable" runat="server" DataField="Interchangeable" />
-						<px:PXCheckBox ID="edRelatedItemRequired" runat="server" DataField="Required" CommitChanges="true" />
-						<px:PXCheckBox ID="edRelatedItemIsActive" runat="server" DataField="IsActive" CommitChanges="true" />
+						<px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" ></px:PXLayoutRule>
+						<px:PXDropDown ID="edRelation" runat="server" DataField="Relation" CommitChanges="true" ></px:PXDropDown>
+						<px:PXNumberEdit ID="edRank" runat="server" DataField="Rank" CommitChanges="true" ></px:PXNumberEdit>
+						<px:PXDropDown ID="edTag" runat="server" DataField="Tag" CommitChanges="true" ></px:PXDropDown>
+						<px:PXSelector ID="edRelatedInventoryID" runat="server" DataField="RelatedInventoryID" AllowEdit="True" CommitChanges="true" ></px:PXSelector>
+						<px:PXTextEdit ID="edRelatedInventoryDesc" runat="server" DataField="Desc" Enabled="False" ></px:PXTextEdit>
+						<px:PXSelector ID="edRelatedInventoryUOM" runat="server" Size="s" DataField="UOM" AutoRefresh="True" CommitChanges="true" ></px:PXSelector>
+						<px:PXNumberEdit ID="edRelatedItemQty" runat="server" DataField="Qty" ></px:PXNumberEdit>
+						<px:PXDateTimeEdit ID="edEffectiveDate" runat="server" DataField="EffectiveDate" ></px:PXDateTimeEdit>
+						<px:PXDateTimeEdit ID="edExpirationDate" runat="server" DataField="ExpirationDate" ></px:PXDateTimeEdit>
+						<px:PXCheckBox ID="edInterchangeable" runat="server" DataField="Interchangeable" ></px:PXCheckBox>
+						<px:PXCheckBox ID="edRelatedItemRequired" runat="server" DataField="Required" CommitChanges="true" ></px:PXCheckBox>
+						<px:PXCheckBox ID="edRelatedItemIsActive" runat="server" DataField="IsActive" CommitChanges="true" ></px:PXCheckBox>
 					</RowTemplate>
-					<Layout FormViewHeight="" />
+					<Layout FormViewHeight="" ></Layout>
 				</px:PXGridLevel>
 			</Levels>
-			<Mode InitNewRow="true" AllowUpload="True" />
-			<AutoSize Enabled="True" MinHeight="150" />
+			<Mode InitNewRow="true" AllowUpload="True" ></Mode>
+			<AutoSize Enabled="True" MinHeight="150" ></AutoSize>
 		</px:PXGrid>
 	</Template>
 </px:PXTabItem>
@@ -662,95 +662,95 @@
             <px:PXTabItem Text="Replenishment" RepaintOnDemand="False">
                 <Template>
                     <px:PXSplitContainer runat="server" ID="sp1" SplitterPosition="300" SkinID="Horizontal" Height="500px">
-                        <AutoSize Enabled="true" />
+                        <AutoSize Enabled="true" ></AutoSize>
                         <Template1>
                             <px:PXGrid ID="repGrid" runat="server" Height="250px" Width="100%" DataSourceID="ds" SkinID="DetailsInTab" Caption="Replenishment Parameters"
                                 TabIndex="100">
-                                <AutoCallBack Command="Refresh" Target="repSubGrid" />
-                                <Mode InitNewRow="True" />
+                                <AutoCallBack Command="Refresh" Target="repSubGrid" ></AutoCallBack>
+                                <Mode InitNewRow="True" ></Mode>
                                 <Levels>
                                     <px:PXGridLevel DataMember="replenishment" DataKeyNames="InventoryID,ReplenishmentClassID">
                                         <RowTemplate>
-                                            <px:PXLayoutRule ID="PXLayoutRule3" runat="server" StartColumn="True" LabelsWidth="SM" ControlSize="XM" />
-                                            <px:PXSelector ID="edReplenishmentClassID" runat="server" DataField="ReplenishmentClassID" AllowEdit="True" CommitChanges="true" />
-                                            <px:PXSelector ID="edReplenishmentPolicyID" runat="server" DataField="ReplenishmentPolicyID" AllowEdit="True" />
-                                            <px:PXDropDown ID="edReplenishmentSource" runat="server" DataField="ReplenishmentSource" />
-                                            <px:PXDropDown ID="edReplenishmentMethod" runat="server" DataField="ReplenishmentMethod" />
-                                            <px:PXSegmentMask ID="edReplenishmentSourceSiteID" runat="server" DataField="ReplenishmentSourceSiteID" CommitChanges="true" />
-                                            <px:PXNumberEdit ID="edMaxShelfLife" runat="server" DataField="MaxShelfLife" />
-                                            <px:PXDateTimeEdit ID="edLaunchDate" runat="server" DataField="LaunchDate" />
-                                            <px:PXDateTimeEdit ID="edTerminationDate" runat="server" DataField="TerminationDate" />
-                                            <px:PXNumberEdit ID="edServiceLevelPct" runat="server" DataField="ServiceLevelPct" />
-                                            <px:PXNumberEdit ID="edSafetyStock" runat="server" DataField="SafetyStock" />
-                                            <px:PXNumberEdit ID="edMinQty" runat="server" DataField="MinQty" />
-                                            <px:PXNumberEdit ID="edMaxQty" runat="server" DataField="MaxQty" />
-                                            <px:PXNumberEdit ID="edTransferERQ" runat="server" DataField="TransferERQ" />
-                                            <px:PXNumberEdit ID="edHistoryDepth" runat="server" AllowNull="true" Size="xxs" DataField="HistoryDepth" />
+                                            <px:PXLayoutRule ID="PXLayoutRule3" runat="server" StartColumn="True" LabelsWidth="SM" ControlSize="XM" ></px:PXLayoutRule>
+                                            <px:PXSelector ID="edReplenishmentClassID" runat="server" DataField="ReplenishmentClassID" AllowEdit="True" CommitChanges="true" ></px:PXSelector>
+                                            <px:PXSelector ID="edReplenishmentPolicyID" runat="server" DataField="ReplenishmentPolicyID" AllowEdit="True" ></px:PXSelector>
+                                            <px:PXDropDown ID="edReplenishmentSource" runat="server" DataField="ReplenishmentSource" ></px:PXDropDown>
+                                            <px:PXDropDown ID="edReplenishmentMethod" runat="server" DataField="ReplenishmentMethod" ></px:PXDropDown>
+                                            <px:PXSegmentMask ID="edReplenishmentSourceSiteID" runat="server" DataField="ReplenishmentSourceSiteID" CommitChanges="true" ></px:PXSegmentMask>
+                                            <px:PXNumberEdit ID="edMaxShelfLife" runat="server" DataField="MaxShelfLife" ></px:PXNumberEdit>
+                                            <px:PXDateTimeEdit ID="edLaunchDate" runat="server" DataField="LaunchDate" ></px:PXDateTimeEdit>
+                                            <px:PXDateTimeEdit ID="edTerminationDate" runat="server" DataField="TerminationDate" ></px:PXDateTimeEdit>
+                                            <px:PXNumberEdit ID="edServiceLevelPct" runat="server" DataField="ServiceLevelPct" ></px:PXNumberEdit>
+                                            <px:PXNumberEdit ID="edSafetyStock" runat="server" DataField="SafetyStock" ></px:PXNumberEdit>
+                                            <px:PXNumberEdit ID="edMinQty" runat="server" DataField="MinQty" ></px:PXNumberEdit>
+                                            <px:PXNumberEdit ID="edMaxQty" runat="server" DataField="MaxQty" ></px:PXNumberEdit>
+                                            <px:PXNumberEdit ID="edTransferERQ" runat="server" DataField="TransferERQ" ></px:PXNumberEdit>
+                                            <px:PXNumberEdit ID="edHistoryDepth" runat="server" AllowNull="true" Size="xxs" DataField="HistoryDepth" ></px:PXNumberEdit>
                                         </RowTemplate>
                                         <Columns>
-                                            <px:PXGridColumn DataField="ReplenishmentClassID" AutoCallBack="True" Width="90px" />
-                                            <px:PXGridColumn DataField="ReplenishmentPolicyID" Width="100px" />
-                                            <px:PXGridColumn DataField="ReplenishmentSource" Type="DropDownList" AutoCallBack="True" />
-                                            <px:PXGridColumn DataField="ReplenishmentMethod" Type="DropDownList" CommitChanges="true" />
-                                            <px:PXGridColumn DataField="ReplenishmentSourceSiteID" Width="140px" CommitChanges="true" />
-                                            <px:PXGridColumn DataField="MaxShelfLife" TextAlign="Right" />
-                                            <px:PXGridColumn DataField="LaunchDate" Width="90px" />
-                                            <px:PXGridColumn DataField="TerminationDate" Width="90px" />
-                                            <px:PXGridColumn DataField="ServiceLevelPct" Width="90px" />
-                                            <px:PXGridColumn DataField="SafetyStock" TextAlign="Right" Width="80px" />
-                                            <px:PXGridColumn DataField="MinQty" TextAlign="Right" Width="80px" />
-                                            <px:PXGridColumn DataField="MaxQty" TextAlign="Right" Width="80px" />
-                                            <px:PXGridColumn DataField="TransferERQ" TextAlign="Right" Width="80px" />
-                                            <px:PXGridColumn DataField="ForecastModelType" Label="Forecast Model Type" Width="140px" />
-                                            <px:PXGridColumn DataField="ForecastPeriodType" Label="Forecast Period Type" Width="50px" />
-                                            <px:PXGridColumn DataField="HistoryDepth" Label="History Scan Depth" Width="50px" />
+                                            <px:PXGridColumn DataField="ReplenishmentClassID" AutoCallBack="True" Width="90px" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="ReplenishmentPolicyID" Width="100px" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="ReplenishmentSource" Type="DropDownList" AutoCallBack="True" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="ReplenishmentMethod" Type="DropDownList" CommitChanges="true" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="ReplenishmentSourceSiteID" Width="140px" CommitChanges="true" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="MaxShelfLife" TextAlign="Right" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="LaunchDate" Width="90px" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="TerminationDate" Width="90px" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="ServiceLevelPct" Width="90px" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="SafetyStock" TextAlign="Right" Width="80px" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="MinQty" TextAlign="Right" Width="80px" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="MaxQty" TextAlign="Right" Width="80px" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="TransferERQ" TextAlign="Right" Width="80px" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="ForecastModelType" Label="Forecast Model Type" Width="140px" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="ForecastPeriodType" Label="Forecast Period Type" Width="50px" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="HistoryDepth" Label="History Scan Depth" Width="50px" ></px:PXGridColumn>
                                         </Columns>
-                                        <Layout FormViewHeight="" />
+                                        <Layout FormViewHeight="" ></Layout>
                                     </px:PXGridLevel>
                                 </Levels>
-                                <AutoSize Enabled="True" />
+                                <AutoSize Enabled="True" ></AutoSize>
                             </px:PXGrid>
                         </Template1>
                         <Template2>
                             <px:PXGrid ID="repSubGrid" runat="server" Height="200px" Width="100%" DataSourceID="ds" SkinID="DetailsInTab" Caption="Subitem Replenishment Parameters"
                                 Style="left: 0px; top: 0px" TabIndex="150">
-                                <Mode InitNewRow="True" />
+                                <Mode InitNewRow="True" ></Mode>
                                 <CallbackCommands>
-                                    <Save CommitChangesIDs="repSubGrid" RepaintControls="None" />
-                                    <FetchRow RepaintControls="None" />
+                                    <Save CommitChangesIDs="repSubGrid" RepaintControls="None" ></Save>
+                                    <FetchRow RepaintControls="None" ></FetchRow>
                                 </CallbackCommands>
                                 <Parameters>
-                                    <px:PXSyncGridParam ControlID="repGrid" />
+                                    <px:PXSyncGridParam ControlID="repGrid" ></px:PXSyncGridParam>
                                 </Parameters>
                                 <ActionBar>
                                     <CustomItems>
                                         <px:PXToolBarButton>
-                                            <AutoCallBack Command="GenerateSubitems" Target="ds" />
+                                            <AutoCallBack Command="GenerateSubitems" Target="ds" ></AutoCallBack>
                                         </px:PXToolBarButton>
                                         <px:PXToolBarButton>
-                                            <AutoCallBack Command="UpdateReplenishment" Target="ds" />
+                                            <AutoCallBack Command="UpdateReplenishment" Target="ds" ></AutoCallBack>
                                         </px:PXToolBarButton>
                                     </CustomItems>
                                 </ActionBar>
                                 <Levels>
                                     <px:PXGridLevel DataMember="subreplenishment" DataKeyNames="InventoryID,ReplenishmentClassID,SubItemID">
                                         <RowTemplate>
-                                            <px:PXSegmentMask ID="edRPSubItemID" runat="server" DataField="SubItemID" Width="27px" AutoRefresh="True" />
+                                            <px:PXSegmentMask ID="edRPSubItemID" runat="server" DataField="SubItemID" Width="27px" AutoRefresh="True" ></px:PXSegmentMask>
                                         </RowTemplate>
                                         <Columns>
-                                            <px:PXGridColumn DataField="InventoryID" />
-                                            <px:PXGridColumn DataField="ReplenishmentClassID" />
-                                            <px:PXGridColumn DataField="SubItemID" />
-                                            <px:PXGridColumn DataField="SafetyStock" TextAlign="Right" Width="100px" />
-                                            <px:PXGridColumn DataField="MinQty" TextAlign="Right" Width="100px" />
-                                            <px:PXGridColumn DataField="MaxQty" TextAlign="Right" Width="100px" />
-                                            <px:PXGridColumn DataField="TransferERQ" TextAlign="Right" Width="80px" />
-                                            <px:PXGridColumn DataField="ItemStatus" Type="DropDownList" />
+                                            <px:PXGridColumn DataField="InventoryID" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="ReplenishmentClassID" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="SubItemID" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="SafetyStock" TextAlign="Right" Width="100px" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="MinQty" TextAlign="Right" Width="100px" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="MaxQty" TextAlign="Right" Width="100px" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="TransferERQ" TextAlign="Right" Width="80px" ></px:PXGridColumn>
+                                            <px:PXGridColumn DataField="ItemStatus" Type="DropDownList" ></px:PXGridColumn>
                                         </Columns>
-                                        <Layout FormViewHeight="" />
+                                        <Layout FormViewHeight="" ></Layout>
                                     </px:PXGridLevel>
                                 </Levels>
-                                <AutoSize Enabled="True" MinHeight="150" />
+                                <AutoSize Enabled="True" MinHeight="150" ></AutoSize>
                             </px:PXGrid>
                         </Template2>
                     </px:PXSplitContainer>
@@ -759,86 +759,86 @@
             <px:PXTabItem Text="Deferral">
                 <Template>
                     <px:PXFormView ID="formDR" runat="server" Width="100%" DataMember="ItemSettings" DataSourceID="ds" Caption="Rules" SkinID="Transparent">
-                        <Activity HighlightColor="" SelectedColor="" />
+                        <Activity HighlightColor="" SelectedColor="" ></Activity>
                         <Template>
-                            <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="SM" ControlSize="XM" />
-                            <px:PXSelector CommitChanges="True" ID="edDeferredCode1" runat="server" DataField="DeferredCode" AllowEdit="True" DataSourceID="ds" />
-							<px:PXLayoutRule runat="server" Merge="true" />
-							<px:PXNumberEdit runat="server" ID="edDefaultTerm" DataField="DefaultTerm" CommitChanges="true" />
-							<px:PXDropDown runat="server" ID="edDefaultTermUOM" DataField="DefaultTermUOM" CommitChanges="true" Width="134px" SuppressLabel="true" />
-							<px:PXLayoutRule runat="server" />
-                            <px:PXCheckBox ID="chkUseParentSubID" runat="server" DataField="UseParentSubID" />
-                            <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="SM" ControlSize="XM" />
-                            <px:PXNumberEdit ID="edTotalPercentage" runat="server" DataField="TotalPercentage" Enabled="false" />
+                            <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="SM" ControlSize="XM" ></px:PXLayoutRule>
+                            <px:PXSelector CommitChanges="True" ID="edDeferredCode1" runat="server" DataField="DeferredCode" AllowEdit="True" DataSourceID="ds" ></px:PXSelector>
+							<px:PXLayoutRule runat="server" Merge="true" ></px:PXLayoutRule>
+							<px:PXNumberEdit runat="server" ID="edDefaultTerm" DataField="DefaultTerm" CommitChanges="true" ></px:PXNumberEdit>
+							<px:PXDropDown runat="server" ID="edDefaultTermUOM" DataField="DefaultTermUOM" CommitChanges="true" Width="134px" SuppressLabel="true" ></px:PXDropDown>
+							<px:PXLayoutRule runat="server" ></px:PXLayoutRule>
+                            <px:PXCheckBox ID="chkUseParentSubID" runat="server" DataField="UseParentSubID" ></px:PXCheckBox>
+                            <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="SM" ControlSize="XM" ></px:PXLayoutRule>
+                            <px:PXNumberEdit ID="edTotalPercentage" runat="server" DataField="TotalPercentage" Enabled="false" ></px:PXNumberEdit>
                         </Template>
                     </px:PXFormView>
                     <px:PXGrid ID="PXGridComponents" runat="server" DataSourceID="ds" AllowFilter="False" Height="200px" Width="100%" Caption="Revenue Components" SkinID="DetailsWithFilter" SyncPosition="true">
-                        <Mode InitNewRow="True" />
+                        <Mode InitNewRow="True" ></Mode>
                         <Levels>
                             <px:PXGridLevel DataMember="Components" DataKeyNames="InventoryID,ComponentID">
                                 <RowTemplate>
-                                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="SM" ControlSize="XM" />
-                                    <px:PXDropDown ID="edPriceOption" runat="server" DataField="AmtOption" CommitChanges="true" />
-                                    <px:PXDropDown ID="edPriceOptionASC606" runat="server" DataField="AmtOptionASC606" CommitChanges="true" />
-                                    <px:PXSegmentMask ID="edComponentID" runat="server" DataField="ComponentID" AllowEdit="True" />
-                                    <px:PXNumberEdit Size="xs" ID="edFixedAmt" runat="server" DataField="FixedAmt" />
-                                    <px:PXSelector ID="edDeferredCode" runat="server" DataField="DeferredCode" CommitChanges="true" AllowEdit="True" />
-									<px:PXNumberEdit runat="server" ID="edDefaultTerm" DataField="DefaultTerm" CommitChanges="true" />
-                                    <px:PXCheckBox ID="chkOverrideDefaultTerm" runat="server" DataField="OverrideDefaultTerm" />
-                                    <px:PXNumberEdit ID="edPercentage" runat="server" DataField="Percentage" />
-                                    <px:PXSegmentMask ID="edSalesAcctID" runat="server" DataField="SalesAcctID" AllowEdit="True" />
-                                    <px:PXSegmentMask ID="edSalesSubID" runat="server" DataField="SalesSubID" />
-                                    <px:PXSelector ID="edUOM" runat="server" DataField="UOM" AllowEdit="True" AutoRefresh="true" />
-                                    <px:PXNumberEdit ID="edQty" runat="server" DataField="Qty" />
+                                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="SM" ControlSize="XM" ></px:PXLayoutRule>
+                                    <px:PXDropDown ID="edPriceOption" runat="server" DataField="AmtOption" CommitChanges="true" ></px:PXDropDown>
+                                    <px:PXDropDown ID="edPriceOptionASC606" runat="server" DataField="AmtOptionASC606" CommitChanges="true" ></px:PXDropDown>
+                                    <px:PXSegmentMask ID="edComponentID" runat="server" DataField="ComponentID" AllowEdit="True" ></px:PXSegmentMask>
+                                    <px:PXNumberEdit Size="xs" ID="edFixedAmt" runat="server" DataField="FixedAmt" ></px:PXNumberEdit>
+                                    <px:PXSelector ID="edDeferredCode" runat="server" DataField="DeferredCode" CommitChanges="true" AllowEdit="True" ></px:PXSelector>
+									<px:PXNumberEdit runat="server" ID="edDefaultTerm" DataField="DefaultTerm" CommitChanges="true" ></px:PXNumberEdit>
+                                    <px:PXCheckBox ID="chkOverrideDefaultTerm" runat="server" DataField="OverrideDefaultTerm" ></px:PXCheckBox>
+                                    <px:PXNumberEdit ID="edPercentage" runat="server" DataField="Percentage" ></px:PXNumberEdit>
+                                    <px:PXSegmentMask ID="edSalesAcctID" runat="server" DataField="SalesAcctID" AllowEdit="True" ></px:PXSegmentMask>
+                                    <px:PXSegmentMask ID="edSalesSubID" runat="server" DataField="SalesSubID" ></px:PXSegmentMask>
+                                    <px:PXSelector ID="edUOM" runat="server" DataField="UOM" AllowEdit="True" AutoRefresh="true" ></px:PXSelector>
+                                    <px:PXNumberEdit ID="edQty" runat="server" DataField="Qty" ></px:PXNumberEdit>
                                 </RowTemplate>
                                 <Columns>
-                                    <px:PXGridColumn AutoCallBack="True" DataField="ComponentID" Width="99px" />
-                                    <px:PXGridColumn DataField="SalesAcctID" Width="99px" CommitChanges="true" />
-                                    <px:PXGridColumn DataField="SalesSubID" Width="99px" />
-                                    <px:PXGridColumn DataField="UOM" Width="99px" />
-                                    <px:PXGridColumn DataField="Qty" TextAlign="Right" Width="99px" />
-                                    <px:PXGridColumn DataField="DeferredCode" Width="99px" CommitChanges="true" />
-                                    <px:PXGridColumn DataField="DefaultTerm" />
-                                    <px:PXGridColumn DataField="DefaultTermUOM" />
-                                    <px:PXGridColumn DataField="OverrideDefaultTerm" TextAlign="Center" Type="CheckBox" CommitChanges="true" />
-                                    <px:PXGridColumn DataField="AmtOption" RenderEditorText="True" Width="81px" CommitChanges="true" />
-                                    <px:PXGridColumn DataField="AmtOptionASC606" RenderEditorText="True" Width="81px" CommitChanges="true" />
-                                    <px:PXGridColumn DataField="FixedAmt" TextAlign="Right" Width="81px" />
-                                    <px:PXGridColumn DataField="Percentage" TextAlign="Right" Width="99px" />
+                                    <px:PXGridColumn AutoCallBack="True" DataField="ComponentID" Width="99px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="SalesAcctID" Width="99px" CommitChanges="true" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="SalesSubID" Width="99px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="UOM" Width="99px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="Qty" TextAlign="Right" Width="99px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="DeferredCode" Width="99px" CommitChanges="true" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="DefaultTerm" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="DefaultTermUOM" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="OverrideDefaultTerm" TextAlign="Center" Type="CheckBox" CommitChanges="true" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="AmtOption" RenderEditorText="True" Width="81px" CommitChanges="true" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="AmtOptionASC606" RenderEditorText="True" Width="81px" CommitChanges="true" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="FixedAmt" TextAlign="Right" Width="81px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="Percentage" TextAlign="Right" Width="99px" ></px:PXGridColumn>
                                 </Columns>
-                                <Layout FormViewHeight="" />
+                                <Layout FormViewHeight="" ></Layout>
                             </px:PXGridLevel>
                         </Levels>
-                        <AutoSize Enabled="True" />
+                        <AutoSize Enabled="True" ></AutoSize>
                     </px:PXGrid>
                 </Template>
             </px:PXTabItem>
             <px:PXTabItem Text="GL Accounts">
                 <Template>
-                    <px:PXLayoutRule ID="PXLayoutRule4" runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" />
-                    <px:PXSegmentMask ID="edInvtAcctID" runat="server" DataField="InvtAcctID" CommitChanges="true" />
-                    <px:PXSegmentMask ID="edInvtSubID" runat="server" DataField="InvtSubID" AutoRefresh="True" CommitChanges="True" />
-                    <px:PXSegmentMask ID="edReasonCodeSubID" runat="server" DataField="ReasonCodeSubID" AutoRefresh="True" />
-                    <px:PXSegmentMask ID="edSalesAcctID" runat="server" DataField="SalesAcctID" CommitChanges="true" />
-                    <px:PXSegmentMask ID="edSalesSubID" runat="server" DataField="SalesSubID" AutoRefresh="True" />
-                    <px:PXSegmentMask ID="edCOGSAcctID" runat="server" DataField="COGSAcctID" CommitChanges="true" />
-                    <px:PXSegmentMask ID="edCOGSSubID" runat="server" DataField="COGSSubID" AutoRefresh="True" />
-                    <px:PXSegmentMask ID="edStdCstVarAcctID" runat="server" DataField="StdCstVarAcctID" CommitChanges="true" />
-                    <px:PXSegmentMask ID="edStdCstVarSubID" runat="server" DataField="StdCstVarSubID" AutoRefresh="True" />
-                    <px:PXSegmentMask ID="edStdCstRevAcctID" runat="server" DataField="StdCstRevAcctID" AutoRefresh="True" CommitChanges="true" />
-                    <px:PXSegmentMask ID="edStdCstRevSubID" runat="server" DataField="StdCstRevSubID" AutoRefresh="True" />
-                    <px:PXSegmentMask ID="edPOAccrualAcctID" runat="server" DataField="POAccrualAcctID" CommitChanges="true" />
-                    <px:PXSegmentMask ID="edPOAccrualSubID" runat="server" DataField="POAccrualSubID" AutoRefresh="True" />
-                    <px:PXSegmentMask ID="edPPVAcctID" runat="server" DataField="PPVAcctID" CommitChanges="true" />
-                    <px:PXSegmentMask ID="edPPVSubID" runat="server" DataField="PPVSubID" AutoRefresh="True" />
-                    <px:PXSegmentMask ID="edLCVarianceAcctID" runat="server" DataField="LCVarianceAcctID" CommitChanges="true" />
-                    <px:PXSegmentMask ID="edLCVarianceSubID" runat="server" DataField="LCVarianceSubID" AutoRefresh="True" />
-					<px:PXSegmentMask ID="edDeferralAcctID" runat="server" DataField="DeferralAcctID" CommitChanges="true" />
-                    <px:PXSegmentMask ID="edDeferralSubID" runat="server" DataField="DeferralSubID" AutoRefresh="True" />
-					<px:PXSegmentMask runat="server" DataField="AMWIPAcctID" AutoRefresh="True" CommitChanges="True" ID="edWIPAcctID" />
-					<px:PXSegmentMask runat="server" DataField="AMWIPSubID" AutoRefresh="True" DataKeyNames="Value" CommitChanges="True" ID="edWIPSubID" />
-					<px:PXSegmentMask runat="server" DataField="AMWIPVarianceAcctID" CommitChanges="true" ID="edAMWIPVarianceAcctID" />
-					<px:PXSegmentMask runat="server" DataField="AMWIPVarianceSubID" AutoRefresh="True" ID="edAMWIPVarianceSubID" />
+                    <px:PXLayoutRule ID="PXLayoutRule4" runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" ></px:PXLayoutRule>
+                    <px:PXSegmentMask ID="edInvtAcctID" runat="server" DataField="InvtAcctID" CommitChanges="true" ></px:PXSegmentMask>
+                    <px:PXSegmentMask ID="edInvtSubID" runat="server" DataField="InvtSubID" AutoRefresh="True" CommitChanges="True" ></px:PXSegmentMask>
+                    <px:PXSegmentMask ID="edReasonCodeSubID" runat="server" DataField="ReasonCodeSubID" AutoRefresh="True" ></px:PXSegmentMask>
+                    <px:PXSegmentMask ID="edSalesAcctID" runat="server" DataField="SalesAcctID" CommitChanges="true" ></px:PXSegmentMask>
+                    <px:PXSegmentMask ID="edSalesSubID" runat="server" DataField="SalesSubID" AutoRefresh="True" ></px:PXSegmentMask>
+                    <px:PXSegmentMask ID="edCOGSAcctID" runat="server" DataField="COGSAcctID" CommitChanges="true" ></px:PXSegmentMask>
+                    <px:PXSegmentMask ID="edCOGSSubID" runat="server" DataField="COGSSubID" AutoRefresh="True" ></px:PXSegmentMask>
+                    <px:PXSegmentMask ID="edStdCstVarAcctID" runat="server" DataField="StdCstVarAcctID" CommitChanges="true" ></px:PXSegmentMask>
+                    <px:PXSegmentMask ID="edStdCstVarSubID" runat="server" DataField="StdCstVarSubID" AutoRefresh="True" ></px:PXSegmentMask>
+                    <px:PXSegmentMask ID="edStdCstRevAcctID" runat="server" DataField="StdCstRevAcctID" AutoRefresh="True" CommitChanges="true" ></px:PXSegmentMask>
+                    <px:PXSegmentMask ID="edStdCstRevSubID" runat="server" DataField="StdCstRevSubID" AutoRefresh="True" ></px:PXSegmentMask>
+                    <px:PXSegmentMask ID="edPOAccrualAcctID" runat="server" DataField="POAccrualAcctID" CommitChanges="true" ></px:PXSegmentMask>
+                    <px:PXSegmentMask ID="edPOAccrualSubID" runat="server" DataField="POAccrualSubID" AutoRefresh="True" ></px:PXSegmentMask>
+                    <px:PXSegmentMask ID="edPPVAcctID" runat="server" DataField="PPVAcctID" CommitChanges="true" ></px:PXSegmentMask>
+                    <px:PXSegmentMask ID="edPPVSubID" runat="server" DataField="PPVSubID" AutoRefresh="True" ></px:PXSegmentMask>
+                    <px:PXSegmentMask ID="edLCVarianceAcctID" runat="server" DataField="LCVarianceAcctID" CommitChanges="true" ></px:PXSegmentMask>
+                    <px:PXSegmentMask ID="edLCVarianceSubID" runat="server" DataField="LCVarianceSubID" AutoRefresh="True" ></px:PXSegmentMask>
+					<px:PXSegmentMask ID="edDeferralAcctID" runat="server" DataField="DeferralAcctID" CommitChanges="true" ></px:PXSegmentMask>
+                    <px:PXSegmentMask ID="edDeferralSubID" runat="server" DataField="DeferralSubID" AutoRefresh="True" ></px:PXSegmentMask>
+					<px:PXSegmentMask runat="server" DataField="AMWIPAcctID" AutoRefresh="True" CommitChanges="True" ID="edWIPAcctID" ></px:PXSegmentMask>
+					<px:PXSegmentMask runat="server" DataField="AMWIPSubID" AutoRefresh="True" DataKeyNames="Value" CommitChanges="True" ID="edWIPSubID" ></px:PXSegmentMask>
+					<px:PXSegmentMask runat="server" DataField="AMWIPVarianceAcctID" CommitChanges="true" ID="edAMWIPVarianceAcctID" ></px:PXSegmentMask>
+					<px:PXSegmentMask runat="server" DataField="AMWIPVarianceSubID" AutoRefresh="True" ID="edAMWIPVarianceSubID" ></px:PXSegmentMask>
                 </Template>
             </px:PXTabItem>
             <px:PXTabItem Text="Restriction Groups">
@@ -846,34 +846,34 @@
                     <px:PXGrid ID="grid3" runat="server" DataSourceID="ds" Height="150px" Style="z-index: 100" Width="100%" AdjustPageSize="Auto" AllowSearch="True" SkinID="Details" BorderWidth="0px">
                         <ActionBar>
                             <Actions>
-                                <NoteShow Enabled="False" />
+                                <NoteShow Enabled="False" ></NoteShow>
                             </Actions>
                             <CustomItems>
-                                <px:PXToolBarButton Text="Group Details" CommandSourceID="ds" CommandName="ViewGroupDetails" />
+                                <px:PXToolBarButton Text="Group Details" CommandSourceID="ds" CommandName="ViewGroupDetails" ></px:PXToolBarButton>
                             </CustomItems>
                         </ActionBar>
                         <Levels>
                             <px:PXGridLevel DataMember="Groups" DataKeyNames="GroupName">
-                                <Mode AllowAddNew="False" AllowDelete="False" />
+                                <Mode AllowAddNew="False" AllowDelete="False" ></Mode>
                                 <Columns>
-                                    <px:PXGridColumn DataField="Included" TextAlign="Center" Type="CheckBox" Width="40px" AllowCheckAll="True" />
-                                    <px:PXGridColumn DataField="GroupName" Width="150px" />
-                                    <px:PXGridColumn DataField="SpecificType" Width="150px" Type="DropDownList" />
-                                    <px:PXGridColumn DataField="Description" Width="200px" />
-                                    <px:PXGridColumn DataField="Active" TextAlign="Center" Type="CheckBox" Width="60px" />
-                                    <px:PXGridColumn DataField="GroupType" Label="Visible To Entities" Width="171px" Type="DropDownList" />
+                                    <px:PXGridColumn DataField="Included" TextAlign="Center" Type="CheckBox" Width="40px" AllowCheckAll="True" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="GroupName" Width="150px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="SpecificType" Width="150px" Type="DropDownList" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="Description" Width="200px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="Active" TextAlign="Center" Type="CheckBox" Width="60px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="GroupType" Label="Visible To Entities" Width="171px" Type="DropDownList" ></px:PXGridColumn>
                                 </Columns>
                                 <RowTemplate>
-                                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" />
-                                    <px:PXCheckBox SuppressLabel="True" ID="chkSelected" runat="server" DataField="Included" />
-                                    <px:PXSelector ID="edGroupName" runat="server" DataField="GroupName" />
-                                    <px:PXTextEdit ID="edDescription" runat="server" DataField="Description" />
-                                    <px:PXCheckBox SuppressLabel="True" ID="chkActive" runat="server" Checked="True" DataField="Active" />
-                                    <px:PXDropDown ID="edGroupType" runat="server" DataField="GroupType" Enabled="False" />
+                                    <px:PXLayoutRule runat="server" StartColumn="True" LabelsWidth="M" ControlSize="XM" ></px:PXLayoutRule>
+                                    <px:PXCheckBox SuppressLabel="True" ID="chkSelected" runat="server" DataField="Included" ></px:PXCheckBox>
+                                    <px:PXSelector ID="edGroupName" runat="server" DataField="GroupName" ></px:PXSelector>
+                                    <px:PXTextEdit ID="edDescription" runat="server" DataField="Description" ></px:PXTextEdit>
+                                    <px:PXCheckBox SuppressLabel="True" ID="chkActive" runat="server" Checked="True" DataField="Active" ></px:PXCheckBox>
+                                    <px:PXDropDown ID="edGroupType" runat="server" DataField="GroupType" Enabled="False" ></px:PXDropDown>
                                 </RowTemplate>
                             </px:PXGridLevel>
                         </Levels>
-                        <AutoSize Enabled="True" MinHeight="150" />
+                        <AutoSize Enabled="True" MinHeight="150" ></AutoSize>
                     </px:PXGrid>
                 </Template>
             </px:PXTabItem>
@@ -883,76 +883,81 @@
                 <Template>
                     <px:PXRichTextEdit ID="edBody" runat="server" DataField="Body" Style="border-width: 0px; border-top-width: 1px; width: 100%;"
                         AllowAttached="true" AllowSearch="true" AllowLoadTemplate="false" AllowSourceMode="true">
-                        <AutoSize Enabled="True" MinHeight="216" />
-                        <LoadTemplate TypeName="PX.SM.SMNotificationMaint" DataMember="Notifications" ViewName="NotificationTemplate" ValueField="notificationID" TextField="Name" DataSourceID="ds" Size="M"/>
+                        <AutoSize Enabled="True" MinHeight="216" ></AutoSize>
+                        <LoadTemplate TypeName="PX.SM.SMNotificationMaint" DataMember="Notifications" ViewName="NotificationTemplate" ValueField="notificationID" TextField="Name" DataSourceID="ds" Size="M"></LoadTemplate>
                     </px:PXRichTextEdit>
                 </Template>
             </px:PXTabItem>
+	<px:PXTabItem Text="Compatible Devices">
+		<Template>
+			<px:PXGrid runat="server" ID="CstPXGrid3">
+				<Levels>
+					<px:PXGridLevel /></Levels></px:PXGrid></Template></px:PXTabItem>
   			<px:PXTabItem Text="Service Management" VisibleExp="DataControls[&quot;chkEquipmentManagement&quot;].Value == 1" BindingContext="form">
 				<Template>
 					<px:PXFormView runat="server" ID="formSM" DataMember="ItemSettings" Style="z-index: 100" Width="100%">
                         <ContentStyle BackColor="Transparent" BorderStyle="None" >
                         </ContentStyle>
 						<Template>
-							<px:PXLayoutRule runat="server" StartGroup="True" />
+							<px:PXLayoutRule runat="server" StartGroup="True" ></px:PXLayoutRule>
 							<px:PXGroupBox runat="server" ID="edEquipmentItemClass" Caption="Equipment Class" DataField="EquipmentItemClass" CommitChanges="True">
 								<Template>
-									<px:PXRadioButton runat="server" ID="edEquipmentItemClass_op0" Value="OI" Text="Part or Other Inventory" />
-									<px:PXRadioButton runat="server" ID="edEquipmentItemClass_op1" Value="ME" Text="Model Equipment" />
-									<px:PXRadioButton runat="server" ID="edEquipmentItemClass_op2" Text="Component" Value="CT" />
-									<px:PXRadioButton runat="server" ID="edEquipmentItemClass_op3" Text="Consumable" Value="CE" />
+									<px:PXRadioButton runat="server" ID="edEquipmentItemClass_op0" Value="OI" Text="Part or Other Inventory" ></px:PXRadioButton>
+									<px:PXRadioButton runat="server" ID="edEquipmentItemClass_op1" Value="ME" Text="Model Equipment" ></px:PXRadioButton>
+									<px:PXRadioButton runat="server" ID="edEquipmentItemClass_op2" Text="Component" Value="CT" ></px:PXRadioButton>
+									<px:PXRadioButton runat="server" ID="edEquipmentItemClass_op3" Text="Consumable" Value="CE" ></px:PXRadioButton>
 								</Template>
 							</px:PXGroupBox>
-							<px:PXSelector runat="server" ID="edManufacturerID" DataField="ManufacturerID" CommitChanges="True" AllowEdit="True" />
-							<px:PXSelector runat="server" ID="edManufacturerModelID" DataField="ManufacturerModelID" AllowEdit="True" CommitChanges="True" AutoRefresh="True" />
-                            <px:PXSelector runat="server" ID="edEquipmentTypeID" DataField="EquipmentTypeID" AllowEdit="True" CommitChanges="True" AutoRefresh="True" />
-							<px:PXCheckBox runat="server" ID="edMem_ShowComponent" DataField="Mem_ShowComponent" />
-							<px:PXLayoutRule runat="server" StartColumn="True" />
-							<px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="EQUIPMENT GENERAL WARRANTY" />
-							<px:PXLayoutRule runat="server" Merge="True" />
-							<px:PXNumberEdit runat="server" ID="edCpnyWarrantyValue" DataField="CpnyWarrantyValue" Width="30px" />
-							<px:PXDropDown runat="server" ID="edCpnyWarrantyType" DataField="CpnyWarrantyType" SuppressLabel="True" Size="S" />
-							<px:PXLayoutRule runat="server" Merge="True" />
-							<px:PXNumberEdit runat="server" ID="edVendorWarrantyValue" DataField="VendorWarrantyValue" Width="30px" />
-							<px:PXDropDown runat="server" ID="edVendorWarrantyType" DataField="VendorWarrantyType" SuppressLabel="True" Size="S" />
+							<px:PXSelector runat="server" ID="edManufacturerID" DataField="ManufacturerID" CommitChanges="True" AllowEdit="True" ></px:PXSelector>
+							<px:PXSelector runat="server" ID="edManufacturerModelID" DataField="ManufacturerModelID" AllowEdit="True" CommitChanges="True" AutoRefresh="True" ></px:PXSelector>
+                            <px:PXSelector runat="server" ID="edEquipmentTypeID" DataField="EquipmentTypeID" AllowEdit="True" CommitChanges="True" AutoRefresh="True" ></px:PXSelector>
+							<px:PXCheckBox runat="server" ID="edMem_ShowComponent" DataField="Mem_ShowComponent" ></px:PXCheckBox>
+							<px:PXLayoutRule runat="server" StartColumn="True" ></px:PXLayoutRule>
+							<px:PXLayoutRule runat="server" StartGroup="True" GroupCaption="EQUIPMENT GENERAL WARRANTY" ></px:PXLayoutRule>
+							<px:PXLayoutRule runat="server" Merge="True" ></px:PXLayoutRule>
+							<px:PXNumberEdit runat="server" ID="edCpnyWarrantyValue" DataField="CpnyWarrantyValue" Width="30px" ></px:PXNumberEdit>
+							<px:PXDropDown runat="server" ID="edCpnyWarrantyType" DataField="CpnyWarrantyType" SuppressLabel="True" Size="S" ></px:PXDropDown>
+							<px:PXLayoutRule runat="server" Merge="True" ></px:PXLayoutRule>
+							<px:PXNumberEdit runat="server" ID="edVendorWarrantyValue" DataField="VendorWarrantyValue" Width="30px" ></px:PXNumberEdit>
+							<px:PXDropDown runat="server" ID="edVendorWarrantyType" DataField="VendorWarrantyType" SuppressLabel="True" Size="S" ></px:PXDropDown>
 						</Template>
 					</px:PXFormView>
 					<px:PXGrid runat="server" ID="gridComponents" SkinID="DetailsInTab" AdjustPageSize="Auto" Width="100%" AutoGenerateColumns="None" SyncPosition="True">
 						<Levels>
 							<px:PXGridLevel DataMember="ModelComponents">
 								<Columns>
-									<px:PXGridColumn DataField="ComponentID" Width="150px" CommitChanges="True" />
-									<px:PXGridColumn DataField="Active" Width="70px" Type="CheckBox" TextAlign="Center" />
-									<px:PXGridColumn DataField="Optional" Width="70" Type="CheckBox" TextAlign="Center" />
-									<px:PXGridColumn DataField="Qty" Width="70" />
-									<px:PXGridColumn DataField="Descr" Width="250px" />
-									<px:PXGridColumn DataField="ClassID" Width="120px" CommitChanges="True" />
-									<px:PXGridColumn DataField="InventoryID" Width="120px" CommitChanges="True"/>
-									<px:PXGridColumn DataField="RequireSerial" Width="70px" Type="CheckBox" TextAlign="Center" />
-									<px:PXGridColumn DataField="CpnyWarrantyValue" Width="80px" />
-									<px:PXGridColumn DataField="CpnyWarrantyType" Width="80px" />
-									<px:PXGridColumn DataField="VendorWarrantyValue" Width="140px" />
-									<px:PXGridColumn DataField="VendorWarrantyType" Width="70px" />
-									<px:PXGridColumn DataField="VendorID" Width="120px" />
+									<px:PXGridColumn DataField="ComponentID" Width="150px" CommitChanges="True" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="Active" Width="70px" Type="CheckBox" TextAlign="Center" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="Optional" Width="70" Type="CheckBox" TextAlign="Center" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="Qty" Width="70" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="Descr" Width="250px" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="ClassID" Width="120px" CommitChanges="True" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="InventoryID" Width="120px" CommitChanges="True"></px:PXGridColumn>
+									<px:PXGridColumn DataField="RequireSerial" Width="70px" Type="CheckBox" TextAlign="Center" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="CpnyWarrantyValue" Width="80px" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="CpnyWarrantyType" Width="80px" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="VendorWarrantyValue" Width="140px" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="VendorWarrantyType" Width="70px" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="VendorID" Width="120px" ></px:PXGridColumn>
 								</Columns>
                                 <RowTemplate>
-                                    <px:PXSelector ID="edEQComponentID" runat="server" DataField="ComponentID" CommitChanges="True" AutoRefresh="True"/>
-                                    <px:PXCheckBox ID="edEQActive" runat="server" DataField="Active"/>
-                                    <px:PXCheckBox ID="edEQOptional" runat="server" DataField="Optional"/>
-                                    <px:PXNumberEdit ID="edEQQty" runat="server" DataField="Qty" />
-                                    <px:PXTextEdit ID="edEQDescr" runat="server" DataField="Descr" />
-                                    <px:PXSelector ID="edEQClassID" runat="server" DataField="ClassID" CommitChanges="True" AutoRefresh="True" AllowEdit="True"/>
-                                    <px:PXSegmentMask ID="edEQInventoryID" runat="server" DataField="InventoryID" CommitChanges="True" AutoRefresh="True" AllowEdit="True"/>
-                                    <px:PXCheckBox ID="edEQRequireSerial" runat="server" DataField="RequireSerial"/>
-                                    <px:PXNumberEdit ID="edEQCpnyWarrantyValue" runat="server" DataField="CpnyWarrantyValue" />
-                                    <px:PXDropDown ID="edEQCpnyWarrantyType" runat="server" DataField="CpnyWarrantyType"/>
-                                    <px:PXNumberEdit ID="edEQVendorWarrantyValue" runat="server" DataField="VendorWarrantyValue" />
-                                    <px:PXDropDown ID="edEQVendorWarrantyType" runat="server" DataField="VendorWarrantyType"/>
-                                    <px:PXSelector ID="edEQVendorID" runat="server" DataField="VendorID" CommitChanges="True" AutoRefresh="True"/>
+                                    <px:PXSelector ID="edEQComponentID" runat="server" DataField="ComponentID" CommitChanges="True" AutoRefresh="True"></px:PXSelector>
+                                    <px:PXCheckBox ID="edEQActive" runat="server" DataField="Active"></px:PXCheckBox>
+                                    <px:PXCheckBox ID="edEQOptional" runat="server" DataField="Optional"></px:PXCheckBox>
+                                    <px:PXNumberEdit ID="edEQQty" runat="server" DataField="Qty" ></px:PXNumberEdit>
+                                    <px:PXTextEdit ID="edEQDescr" runat="server" DataField="Descr" ></px:PXTextEdit>
+                                    <px:PXSelector ID="edEQClassID" runat="server" DataField="ClassID" CommitChanges="True" AutoRefresh="True" AllowEdit="True"></px:PXSelector>
+                                    <px:PXSegmentMask ID="edEQInventoryID" runat="server" DataField="InventoryID" CommitChanges="True" AutoRefresh="True" AllowEdit="True"></px:PXSegmentMask>
+                                    <px:PXCheckBox ID="edEQRequireSerial" runat="server" DataField="RequireSerial"></px:PXCheckBox>
+                                    <px:PXNumberEdit ID="edEQCpnyWarrantyValue" runat="server" DataField="CpnyWarrantyValue" ></px:PXNumberEdit>
+                                    <px:PXDropDown ID="edEQCpnyWarrantyType" runat="server" DataField="CpnyWarrantyType"></px:PXDropDown>
+                                    <px:PXNumberEdit ID="edEQVendorWarrantyValue" runat="server" DataField="VendorWarrantyValue" ></px:PXNumberEdit>
+                                    <px:PXDropDown ID="edEQVendorWarrantyType" runat="server" DataField="VendorWarrantyType"></px:PXDropDown>
+                                    <px:PXSelector ID="edEQVendorID" runat="server" DataField="VendorID" CommitChanges="True" AutoRefresh="True"></px:PXSelector>
                                 </RowTemplate>
 							</px:PXGridLevel>
 						</Levels>
-						<AutoSize Enabled="True" />
+						<AutoSize Enabled="True" ></AutoSize>
 					</px:PXGrid>
 				</Template>
 			</px:PXTabItem>
@@ -962,59 +967,58 @@
                         <Levels>
                             <px:PXGridLevel DataMember="SyncRecs" DataKeyNames="SyncRecordID">
                                 <Columns>
-                                    <px:PXGridColumn DataField="SYProvider__Name" Width="200px" />                                    
-                                    <px:PXGridColumn DataField="RemoteID" Width="200px" CommitChanges="True" LinkCommand="GoToSalesforce" />
-                                    <px:PXGridColumn DataField="Status" Width="120px" />
-                                    <px:PXGridColumn DataField="Operation" Width="100px" />      
-                                    <px:PXGridColumn DataField="LastErrorMessage" Width="230" />
-                                    <px:PXGridColumn DataField="LastAttemptTS" Width="120px" DisplayFormat="g" />
-                                    <px:PXGridColumn DataField="AttemptCount" Width="120px" />
-                                    <px:PXGridColumn DataField="SFEntitySetup__ImportScenario" Width="150" />
-                                    <px:PXGridColumn DataField="SFEntitySetup__ExportScenario" Width="150" />
+                                    <px:PXGridColumn DataField="SYProvider__Name" Width="200px" ></px:PXGridColumn>                                    
+                                    <px:PXGridColumn DataField="RemoteID" Width="200px" CommitChanges="True" LinkCommand="GoToSalesforce" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="Status" Width="120px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="Operation" Width="100px" ></px:PXGridColumn>      
+                                    <px:PXGridColumn DataField="LastErrorMessage" Width="230" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="LastAttemptTS" Width="120px" DisplayFormat="g" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="AttemptCount" Width="120px" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="SFEntitySetup__ImportScenario" Width="150" ></px:PXGridColumn>
+                                    <px:PXGridColumn DataField="SFEntitySetup__ExportScenario" Width="150" ></px:PXGridColumn>
                                 </Columns>                               
-                                <Layout FormViewHeight="" />
+                                <Layout FormViewHeight="" ></Layout>
                             </px:PXGridLevel>
                         </Levels>
                         <ActionBar>                        
                             <CustomItems>
                                 <px:PXToolBarButton Key="SyncSalesforce">
-                                    <AutoCallBack Command="SyncSalesforce" Target="ds"/>
+                                    <AutoCallBack Command="SyncSalesforce" Target="ds"></AutoCallBack>
                                 </px:PXToolBarButton>
                             </CustomItems>
                         </ActionBar>
-                        <Mode InitNewRow="true" />
-                        <AutoSize Enabled="True" MinHeight="150" />
+                        <Mode InitNewRow="true" ></Mode>
+                        <AutoSize Enabled="True" MinHeight="150" ></AutoSize>
                     </px:PXGrid>
                 </Template>
             </px:PXTabItem>
 			<px:PXTabItem Text="eCommerce">
 				<Template>
-					<px:PXLayoutRule runat="server" ID="BCPXLayoutRule1" StartColumn="True" LabelsWidth="SM" ControlSize="XL" />
-                    <px:PXCheckBox runat="server" ID="edExportToExternal" DataField="ExportToExternal" />
-					<px:PXDropDown runat="server" ID="edVisibility" DataField="Visibility" />
-					<px:PXDropDown runat="server" ID="edAvailability" DataField="Availability" CommitChanges="True" />
-					<px:PXDropDown runat="server" ID="edNotAvailMode" DataField="NotAvailMode" />
-					<px:PXTextEdit runat="server" ID="edCustomURL" DataField="CustomURL" CommitChanges="True" />
-					<px:PXTextEdit runat="server" ID="edPageTitle" DataField="PageTitle" />
-					<px:PXTextEdit runat="server" ID="edShortDescription" DataField="ShortDescription" />
-					<px:PXTextEdit runat="server" ID="edSearchKeywords" DataField="SearchKeywords" />
-					<px:PXTextEdit runat="server" ID="edMetaKeywords" DataField="MetaKeywords" />
-					<px:PXTextEdit runat="server" ID="edMetaDescription" DataField="MetaDescription" TextMode="MultiLine" Height="150" />
-					<px:PXLayoutRule runat="server" ID="BCPXLayoutRule2" StartColumn="True" />
+					<px:PXLayoutRule runat="server" ID="BCPXLayoutRule1" StartColumn="True" LabelsWidth="SM" ControlSize="XL" ></px:PXLayoutRule>
+                    <px:PXCheckBox runat="server" ID="edExportToExternal" DataField="ExportToExternal" ></px:PXCheckBox>
+					<px:PXDropDown runat="server" ID="edVisibility" DataField="Visibility" ></px:PXDropDown>
+					<px:PXDropDown runat="server" ID="edAvailability" DataField="Availability" CommitChanges="True" ></px:PXDropDown>
+					<px:PXDropDown runat="server" ID="edNotAvailMode" DataField="NotAvailMode" ></px:PXDropDown>
+					<px:PXTextEdit runat="server" ID="edCustomURL" DataField="CustomURL" CommitChanges="True" ></px:PXTextEdit>
+					<px:PXTextEdit runat="server" ID="edPageTitle" DataField="PageTitle" ></px:PXTextEdit>
+					<px:PXTextEdit runat="server" ID="edShortDescription" DataField="ShortDescription" ></px:PXTextEdit>
+					<px:PXTextEdit runat="server" ID="edSearchKeywords" DataField="SearchKeywords" ></px:PXTextEdit>
+					<px:PXTextEdit runat="server" ID="edMetaKeywords" DataField="MetaKeywords" ></px:PXTextEdit>
+					<px:PXTextEdit runat="server" ID="edMetaDescription" DataField="MetaDescription" TextMode="MultiLine" Height="150" ></px:PXTextEdit>
+					<px:PXLayoutRule runat="server" ID="BCPXLayoutRule2" StartColumn="True" ></px:PXLayoutRule>
 					<px:PXGrid runat="server" ID="gridInventoryFileUrls" Caption="Media URLs" AutoAdjustColumns="True" Width="500px" Height="265px" SkinID="ShortList" CaptionVisible="True" FilesIndicator="False" NoteIndicator="False" ExportNotes="False">
 						<Levels>
 							<px:PXGridLevel DataMember="InventoryFileUrls">
 								<Columns>
-									<px:PXGridColumn DataField="FileURL" Width="250" CommitChanges="True" />
-									<px:PXGridColumn DataField="FileType" Width="120px" />
+									<px:PXGridColumn DataField="FileURL" Width="250" CommitChanges="True" ></px:PXGridColumn>
+									<px:PXGridColumn DataField="FileType" Width="120px" ></px:PXGridColumn>
 								</Columns>
 							</px:PXGridLevel>
 						</Levels>
 					</px:PXGrid>
 				</Template>
-			</px:PXTabItem>
-        </Items>
-        <AutoSize Enabled="True" MinHeight="150" />
+			</px:PXTabItem></Items>
+        <AutoSize Enabled="True" MinHeight="150" ></AutoSize>
     </px:PXTab>
     <px:PXSmartPanel ID="pnlUpdatePrice" runat="server" Key="VendorItems" CaptionVisible="true" DesignView="Content" Caption="Update Effective Vendor Prices" AllowResize="false">
         <px:PXFormView ID="formEffectiveDate" runat="server" DataSourceID="ds" CaptionVisible="false" DataMember="VendorInventory$UpdatePrice" Width="280px" Height="50px" SkinID="Transparent">
