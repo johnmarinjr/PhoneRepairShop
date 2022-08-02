@@ -1017,7 +1017,18 @@
 						</Levels>
 					</px:PXGrid>
 				</Template>
-			</px:PXTabItem></Items>
+			</px:PXTabItem>
+	<px:PXTabItem Text="Compatible Devices" RepaintOnDemand="False">
+		<Template>
+			<px:PXGrid runat="server" ID="CstPXGrid4" SkinID="Details" Width="100%" DataSourceID="ds">
+				<Levels>
+					<px:PXGridLevel DataMember="CompatibleDevices">
+						<Columns>
+							<px:PXGridColumn DataField="DeviceID" Width="140" CommitChanges="True" />
+							<px:PXGridColumn DataField="DeviceID_description" Width="280" /></Columns>
+						<RowTemplate>
+							<px:PXSelector runat="server" ID="CstPXSelector5" DataField="DeviceID" AllowEdit="True" /></RowTemplate></px:PXGridLevel></Levels>
+				<AutoSize Enabled="True" MinHeight="200" /></px:PXGrid></Template></px:PXTabItem></Items>
         <AutoSize Enabled="True" MinHeight="150" ></AutoSize>
     </px:PXTab>
     <px:PXSmartPanel ID="pnlUpdatePrice" runat="server" Key="VendorItems" CaptionVisible="true" DesignView="Content" Caption="Update Effective Vendor Prices" AllowResize="false">

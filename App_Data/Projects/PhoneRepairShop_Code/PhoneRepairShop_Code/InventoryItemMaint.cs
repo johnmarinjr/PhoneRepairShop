@@ -29,12 +29,20 @@ using PX.Objects.Common.GraphExtensions;
 using PX.Objects.CM;
 using PX.Objects;
 using PX.Objects.IN;
+using PhoneRepairShop;
 
 namespace PX.Objects.IN
 {
     // Acuminator disable once PX1016 ExtensionDoesNotDeclareIsActiveMethod extension should be constantly active
     public class InventoryItemMaint_Extension : PXGraphExtension<PX.Objects.IN.InventoryItemMaint>
     {
+        #region Data Views
+        public SelectFrom<RSSVStockItemDevice>.
+            Where<RSSVStockItemDevice.inventoryID.
+                IsEqual<InventoryItem.inventoryID.FromCurrent>>.View
+            CompatibleDevices;
+        #endregion
+
         #region Event Handlers
 
         protected void _(Events.RowSelected<InventoryItem> e)
@@ -48,6 +56,9 @@ namespace PX.Objects.IN
             //when the Repair Item check box is selected.
             PXUIFieldAttribute.SetEnabled<InventoryItemExt.usrRepairItemType>(e.Cache, e.Row, enableFields);
 
+            //Display the Compatible Devices tab when the Repair Item check box 
+            //is selected.
+            CompatibleDevices.Cache.AllowSelect = enableFields;
         }
 
 

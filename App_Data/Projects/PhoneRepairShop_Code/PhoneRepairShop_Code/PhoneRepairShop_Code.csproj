@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAC\RSSVStockItemDevice.cs" />
     <Compile Include="DAC\RSSVDevice.cs" />
     <Compile Include="Helper\Constants.cs" />
     <Compile Include="Helper\Messages.cs" />
